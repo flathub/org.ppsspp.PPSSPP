@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">ppsspp.desktop</id>
+  <name>PPSSPP</name>
+  <summary>A PlayStation Portable emulator</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0</project_license>
+  <description>
+    <p>
+      PPSSPP is a PSP emulator that can run games full HD resolution. It can
+      even upscale textures that would otherwise be too blurry as they were made
+      for the small screen of the original PSP.
+    </p>
+  </description>
+  <url type="homepage">http://www.ppsspp.org/</url>
+  <screenshots>
+    <screenshot type="default">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/1.png</screenshot>
+    <screenshot >https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/2.png</screenshot>
+    <screenshot >https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</screenshot>
+    <screenshot >https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</screenshot>
+  </screenshots>
+  <updatecontact>b@bpiotrowski.pl</updatecontact>
+</application>
