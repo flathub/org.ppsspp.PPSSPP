@@ -1,0 +1,61 @@
+{
+  "app-id": "org.ppsspp.PPSSPP",
+  "version": "1.4",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "1.6",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "ppsspp",
+  "rename-desktop-file": "ppsspp.desktop",
+  "rename-icon": "ppsspp",
+  "rename-appdata-file": "ppsspp.appdata.xml",
+  "finish-args": [
+    "--device=dri",
+    "--filesystem=home:ro",
+    "--socket=pulseaudio",
+    "--socket=wayland",
+    "--socket=x11",
+    "--share=network"
+  ],
+  "modules": [
+    {
+      "name": "glu",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://mesa.freedesktop.org/archive/glu/glu-9.0.0.tar.bz2",
+          "sha256": "1f7ad0d379a722fcbd303aa5650c6d7d5544fde83196b42a73d1193568a4df12"
+        }
+      ],
+      "cleanup": [ "/include", "/lib/*.a", "/lib/*.la", "/lib/pkgconfig" ]
+    },
+    {
+      "name": "ppsspp",
+      "buildsystem": "cmake",
+      "no-make-install": true,
+      "build-commands": [
+        "mkdir -p /app/ppsspp /app/bin /app/share/applications",
+        "install -m755 PPSSPPSDL /app/ppsspp/",
+        "cp -dr assets /app/ppsspp/",
+        "install -Dm644 icons/icon-512.svg /app/share/icons/hicolor/scalable/apps/ppsspp.svg",
+        "ln -s /app/ppsspp/PPSSPPSDL /app/bin/ppsspp",
+        "install -m644 ppsspp.desktop /app/share/applications/",
+        "install -Dm644 appdata.xml /app/share/appdata/ppsspp.appdata.xml"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/hrydgard/ppsspp.git",
+          "branch": "v1.4"
+        },
+        {
+          "type": "file",
+          "path": "ppsspp.desktop"
+        },
+        {
+          "type": "file",
+          "path": "appdata.xml"
+        }
+      ]
+    }
+  ]
+}
