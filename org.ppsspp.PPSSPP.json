@@ -35,7 +35,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "branch": "v1.4"
+          "branch": "v1.4.1"
         },
         {
           "type": "file",
