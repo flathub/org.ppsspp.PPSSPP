@@ -9,7 +9,7 @@
   "rename-icon": "ppsspp",
   "rename-appdata-file": "ppsspp.appdata.xml",
   "finish-args": [
-    "--device=dri",
+    "--device=all",
     "--filesystem=home:ro",
     "--socket=pulseaudio",
     "--socket=wayland",
