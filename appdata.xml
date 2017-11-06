@@ -15,9 +15,12 @@
   <url type="homepage">http://www.ppsspp.org/</url>
   <screenshots>
     <screenshot type="default">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/1.png</screenshot>
-    <screenshot >https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/2.png</screenshot>
-    <screenshot >https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</screenshot>
-    <screenshot >https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/2.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
+  <releases>
+    <release version="1.4.2" date="2017-05-27"/>
+  </releases>
   <updatecontact>b@bpiotrowski.pl</updatecontact>
 </application>

@@ -1,6 +1,6 @@
 {
   "app-id": "org.ppsspp.PPSSPP",
-  "version": "1.4",
+  "branch": "stable",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "1.6",
   "sdk": "org.freedesktop.Sdk",
@@ -20,8 +20,11 @@
     "shared-modules/glu/glu-9.0.0.json",
     {
       "name": "ppsspp",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
       "no-make-install": true,
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
       "build-commands": [
         "mkdir -p /app/ppsspp /app/bin /app/share/applications",
         "install -m755 PPSSPPSDL /app/ppsspp/",
@@ -35,7 +38,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "branch": "v1.4.1"
+          "commit": "v1.4.2"
         },
         {
           "type": "file",
