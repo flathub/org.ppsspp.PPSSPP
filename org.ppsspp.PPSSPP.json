@@ -1,6 +1,5 @@
 {
   "app-id": "org.ppsspp.PPSSPP",
-  "branch": "stable",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "1.6",
   "sdk": "org.freedesktop.Sdk",
@@ -38,7 +37,8 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "commit": "v1.4.2"
+          "commit": "v1.4.2",
+          "disable-shallow-clone": true
         },
         {
           "type": "file",
