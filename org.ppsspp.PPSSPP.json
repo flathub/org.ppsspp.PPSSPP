@@ -17,6 +17,7 @@
   ],
   "modules": [
     "shared-modules/glu/glu-9.0.0.json",
+    "shared-modules/glew/glew.json",
     {
       "name": "ppsspp",
       "buildsystem": "cmake-ninja",
@@ -35,10 +36,39 @@
       ],
       "sources": [
         {
+          "type": "archive",
+          "url": "https://github.com/hrydgard/ppsspp/archive/v1.5.1.tar.gz",
+          "sha256": "13a317c3d26d55131d62bf5591f98e43b54658de8f557c638a10799577f83012"
+        },
+        {
           "type": "git",
-          "url": "https://github.com/hrydgard/ppsspp.git",
-          "commit": "v1.4.2",
-          "disable-shallow-clone": true
+          "url": "https://github.com/hrydgard/ppsspp-lang.git",
+          "dest": "assets/lang",
+          "commit": "c37028e6b60e416ca52382ae8fdd76b6e77bede7"
+        },
+        {
+          "type": "git",
+          "url": "https://github.com/hrydgard/ppsspp-ffmpeg.git",
+          "dest": "ffmpeg",
+          "commit": "a2e98d7ba4c7c5cac08608732c3058cb46e3e0ef"
+        },
+        {
+          "type": "git",
+          "url": "https://github.com/hrydgard/glslang.git",
+          "commit": "2edde6665d9a56ead5ea0e55b4e64d9a803e6164",
+          "dest": "ext/glslang"
+        },
+        {
+          "type": "git",
+          "url": "https://github.com/Kingcom/armips.git",
+          "commit": "8b4cadaf62d7de42d374056fc6aafc555f2bc7dc",
+          "dest": "ext/armips"
+        },
+        {
+          "type": "archive",
+          "url": "https://github.com/KhronosGroup/SPIRV-Cross/archive/90966d50f57608587bafd95b4e345b02b814754a.tar.gz",
+          "sha256": "282d1f17bd3003162dd945b8ba5c5a10cb5738a7750949a8200ff6555f10ff28",
+          "dest": "ext/SPIRV-Cross"
         },
         {
           "type": "file",
