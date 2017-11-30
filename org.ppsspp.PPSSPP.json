@@ -19,6 +19,24 @@
     "shared-modules/glu/glu-9.0.0.json",
     "shared-modules/glew/glew.json",
     {
+      "name": "libzip",
+      "config-opts": ["--disable-static"],
+      "cleanup": [
+        "/bin",
+        "/include",
+        "/lib/pkgconfig",
+        "/share/man",
+        "/lib/*.la"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://libzip.org/download/libzip-1.3.2.tar.xz",
+          "sha256": "6277845010dbc20e281a77e637c97765c1323d67df4d456fd942f525ea86e185"
+        }
+      ]
+    },
+    {
       "name": "ppsspp",
       "buildsystem": "cmake-ninja",
       "no-make-install": true,
@@ -37,8 +55,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/hrydgard/ppsspp/archive/v1.5.1.tar.gz",
-          "sha256": "13a317c3d26d55131d62bf5591f98e43b54658de8f557c638a10799577f83012"
+          "url": "https://github.com/hrydgard/ppsspp/archive/v1.5.2.tar.gz",
+          "sha256": "29e000f5f0176192ae412ef8dd2e5eefbba640a97ca502aeea6a91dc92142d38"
         },
         {
           "type": "git",
