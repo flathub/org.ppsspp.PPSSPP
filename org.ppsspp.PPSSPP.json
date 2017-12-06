@@ -1,5 +1,6 @@
 {
   "app-id": "org.ppsspp.PPSSPP",
+  "branch": "stable",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "1.6",
   "sdk": "org.freedesktop.Sdk",
@@ -54,39 +55,10 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/hrydgard/ppsspp/archive/v1.5.4.tar.gz",
-          "sha256": "e739155f135f9b3e2e5ce85d0cc11028c4ad71a0078673abe3f908ac6875284a"
-        },
-        {
           "type": "git",
-          "url": "https://github.com/hrydgard/ppsspp-lang.git",
-          "dest": "assets/lang",
-          "commit": "1e3e4a0ba0ca8c0a092e027dfb7c1c4778366db5"
-        },
-        {
-          "type": "git",
-          "url": "https://github.com/hrydgard/ppsspp-ffmpeg.git",
-          "dest": "ffmpeg",
-          "commit": "a2e98d7ba4c7c5cac08608732c3058cb46e3e0ef"
-        },
-        {
-          "type": "git",
-          "url": "https://github.com/hrydgard/glslang.git",
-          "commit": "2edde6665d9a56ead5ea0e55b4e64d9a803e6164",
-          "dest": "ext/glslang"
-        },
-        {
-          "type": "git",
-          "url": "https://github.com/Kingcom/armips.git",
-          "commit": "8b4cadaf62d7de42d374056fc6aafc555f2bc7dc",
-          "dest": "ext/armips"
-        },
-        {
-          "type": "archive",
-          "url": "https://github.com/KhronosGroup/SPIRV-Cross/archive/90966d50f57608587bafd95b4e345b02b814754a.tar.gz",
-          "sha256": "282d1f17bd3003162dd945b8ba5c5a10cb5738a7750949a8200ff6555f10ff28",
-          "dest": "ext/SPIRV-Cross"
+          "url": "https://github.com/hrydgard/ppsspp.git",
+          "tag": "v1.5.4",
+          "disable-shallow-clone": true
         },
         {
           "type": "file",
