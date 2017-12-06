@@ -20,6 +20,7 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
+    <release version="1.5.4" date="2017-12-05"/>
     <release version="1.5.1" date="2017-11-29">
       <description>
         <p>1.5 has support for Vulkan, the new faster way to draw graphics. Supported on many modern Android devices, and if enabled (change Backend in Graphics settings) you will see a massive speed boost. PPSSPP 1.5 also has the usual assortment of fixes:</p>

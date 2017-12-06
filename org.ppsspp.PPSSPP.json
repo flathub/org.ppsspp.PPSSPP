@@ -55,14 +55,14 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/hrydgard/ppsspp/archive/v1.5.2.tar.gz",
-          "sha256": "29e000f5f0176192ae412ef8dd2e5eefbba640a97ca502aeea6a91dc92142d38"
+          "url": "https://github.com/hrydgard/ppsspp/archive/v1.5.4.tar.gz",
+          "sha256": "e739155f135f9b3e2e5ce85d0cc11028c4ad71a0078673abe3f908ac6875284a"
         },
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp-lang.git",
           "dest": "assets/lang",
-          "commit": "c37028e6b60e416ca52382ae8fdd76b6e77bede7"
+          "commit": "1e3e4a0ba0ca8c0a092e027dfb7c1c4778366db5"
         },
         {
           "type": "git",
