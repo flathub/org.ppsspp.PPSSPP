@@ -10,7 +10,7 @@
   "rename-appdata-file": "ppsspp.appdata.xml",
   "finish-args": [
     "--device=all",
-    "--filesystem=home:ro",
+    "--filesystem=host:ro",
     "--socket=pulseaudio",
     "--socket=wayland",
     "--socket=x11",
