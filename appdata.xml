@@ -20,6 +20,20 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
+    <release version="1.6" date="2018-05-26">
+      <description>
+        <ul>
+          <li>OpenGL backend now properly multithreaded, giving a good speed boost.</li>
+          <li>Various Vulkan performance improvements and memory allocation fixes.</li>
+          <li>GPU command interpreter performance improvements</li>
+          <li>Bugfixes and some performance improvements in the ARM64 JIT compiler and IR interpreter</li>
+          <li>Shader cache enabled for Vulkan</li>
+          <li>Texture replacement ID bugfix (note: some textures from 1.5.4 may become incompatible)</li>
+          <li>Adhoc multiplayer fixes</li>
+          <li>Vulkan support on Linux/SDL</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.4" date="2017-12-05"/>
     <release version="1.5.1" date="2017-11-29">
       <description>
