@@ -20,6 +20,11 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
+    <release version="1.6.1" date="2018-05-30">
+      <description>
+        <p>Fix various crashes</p>
+      </description>
+    </release>
     <release version="1.6" date="2018-05-26">
       <description>
         <ul>
