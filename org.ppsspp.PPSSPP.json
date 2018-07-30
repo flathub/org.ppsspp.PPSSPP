@@ -21,19 +21,19 @@
     "shared-modules/glew/glew.json",
     {
       "name": "libzip",
-      "config-opts": ["--disable-static"],
+      "buildsystem": "cmake-ninja",
+      "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
       "cleanup": [
         "/bin",
         "/include",
         "/lib/pkgconfig",
-        "/share/man",
-        "/lib/*.la"
+        "/share/man"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://libzip.org/download/libzip-1.3.2.tar.xz",
-          "sha256": "6277845010dbc20e281a77e637c97765c1323d67df4d456fd942f525ea86e185"
+          "url": "https://libzip.org/download/libzip-1.5.1.tar.xz",
+          "sha256": "04ea35b6956c7b3453f1ed3f3fe40e3ddae1f43931089124579e8384e79ed372"
         }
       ]
     },
@@ -57,7 +57,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "tag": "v1.5.4",
+          "tag": "v1.6.3",
           "disable-shallow-clone": true
         },
         {
