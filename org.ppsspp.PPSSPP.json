@@ -42,7 +42,8 @@
       "buildsystem": "cmake-ninja",
       "no-make-install": true,
       "config-opts": [
-        "-DCMAKE_BUILD_TYPE=Release"
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DOpenGL_GL_PREFERENCE=GLVND"
       ],
       "build-commands": [
         "mkdir -p /app/ppsspp /app/bin /app/share/applications",
