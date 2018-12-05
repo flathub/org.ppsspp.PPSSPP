@@ -20,6 +20,7 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
+    <release version="1.7.5" date="2018-12-05"/>
     <release version="1.7.2" date="2018-11-03"/>
     <release version="1.7.1" date="2018-11-01"/>
     <release version="1.6.3" date="2018-06-05"/>
