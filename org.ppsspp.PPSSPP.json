@@ -2,7 +2,7 @@
   "app-id": "org.ppsspp.PPSSPP",
   "branch": "stable",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "18.08",
+  "runtime-version": "19.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "ppsspp",
   "rename-desktop-file": "ppsspp.desktop",
@@ -17,7 +17,7 @@
     "--share=network"
   ],
   "modules": [
-    "shared-modules/glu/glu-9.0.0.json",
+    "shared-modules/glu/glu-9.json",
     "shared-modules/glew/glew.json",
     {
       "name": "libzip",
@@ -58,7 +58,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "tag": "v1.8.0",
+          "tag": "v1.9.4",
           "disable-shallow-clone": true
         },
         {
