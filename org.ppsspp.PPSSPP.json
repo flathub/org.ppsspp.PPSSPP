@@ -12,7 +12,6 @@
     "--device=all",
     "--filesystem=host:ro",
     "--socket=pulseaudio",
-    "--socket=wayland",
     "--socket=x11",
     "--share=network"
   ],
@@ -22,7 +21,7 @@
     {
       "name": "libzip",
       "buildsystem": "cmake-ninja",
-      "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
+      "config-opts": ["-DCMAKE_BUILD_TYPE=RelWithDebInfo"],
       "cleanup": [
         "/bin",
         "/include",
@@ -32,8 +31,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://libzip.org/download/libzip-1.5.2.tar.xz",
-          "sha256": "b3de4d4bd49a01e0cab3507fc163f88e1651695b6b9cb25ad174dbe319d4a3b4"
+          "url": "https://libzip.org/download/libzip-1.7.1.tar.xz",
+          "sha256": "a020dc1b17a79faa748e43a05f8605d65e403813e8e97ad3a300a90ddba097ac"
         }
       ]
     },
@@ -42,15 +41,15 @@
       "buildsystem": "cmake-ninja",
       "no-make-install": true,
       "config-opts": [
-        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
         "-DOpenGL_GL_PREFERENCE=GLVND"
       ],
       "build-commands": [
         "mkdir -p /app/ppsspp /app/bin /app/share/applications",
         "install -m755 PPSSPPSDL /app/ppsspp/",
+        "ln -s /app/ppsspp/PPSSPPSDL /app/bin/ppsspp",
         "cp -dr assets /app/ppsspp/",
         "install -Dm644 icons/icon-512.svg /app/share/icons/hicolor/scalable/apps/ppsspp.svg",
-        "ln -s /app/ppsspp/PPSSPPSDL /app/bin/ppsspp",
         "install -m644 ppsspp.desktop /app/share/applications/",
         "install -Dm644 appdata.xml /app/share/appdata/ppsspp.appdata.xml"
       ],
@@ -58,8 +57,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "tag": "v1.9.4",
-          "disable-shallow-clone": true
+          "commit": "401df203844465b84015d4710c6f02914b890589"
         },
         {
           "type": "file",
