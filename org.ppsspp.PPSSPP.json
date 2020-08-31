@@ -2,7 +2,7 @@
   "app-id": "org.ppsspp.PPSSPP",
   "branch": "stable",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
+  "runtime-version": "20.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "ppsspp",
   "rename-desktop-file": "ppsspp.desktop",
@@ -57,7 +57,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "commit": "401df203844465b84015d4710c6f02914b890589"
+          "commit": "087de849bdc74205dd00d8e6e11ba17a591213ab"
         },
         {
           "type": "file",
