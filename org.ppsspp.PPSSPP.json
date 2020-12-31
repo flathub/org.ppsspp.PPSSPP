@@ -61,6 +61,14 @@
         },
         {
           "type": "file",
+          "path": "rebuild_ffmpeg.sh"
+        },
+        {
+          "type": "shell",
+          "commands": ["./rebuild_ffmpeg.sh"]
+        },
+        {
+          "type": "file",
           "path": "ppsspp.desktop"
         },
         {
