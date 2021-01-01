@@ -15,6 +15,9 @@
     "--socket=x11",
     "--share=network"
   ],
+  "cleanup": [
+    "/ffmpeg"
+  ],
   "modules": [
     "shared-modules/glu/glu-9.json",
     "shared-modules/glew/glew.json",
@@ -37,12 +40,44 @@
       ]
     },
     {
+      "name": "ppsspp-ffmpeg",
+      "buildsystem": "simple",
+      "build-commands": [
+        "rm -r ./linux",
+        "./build.sh",
+        "mkdir -p /app/ffmpeg && cp -r ./linux /app/ffmpeg/"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/hrydgard/ppsspp-ffmpeg.git",
+          "commit": "55147e5f33f5ae4904f75ec082af809267122b94"
+        },
+        {
+          "type": "script",
+          "dest-filename": "build.sh",
+          "only-arches": ["aarch64"],
+          "commands":[
+            "sed -i 's/GENERAL=/GENERAL_NO=/' linux_arm64.sh",
+            "./linux_arm64.sh"
+          ]
+        },
+        {
+          "type": "script",
+          "dest-filename": "build.sh",
+          "only-arches": ["x86_64"],
+          "commands":["./linux_x86-64.sh"]
+        }
+      ]
+    },
+    {
       "name": "ppsspp",
       "buildsystem": "cmake-ninja",
       "no-make-install": true,
       "config-opts": [
         "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DOpenGL_GL_PREFERENCE=GLVND"
+        "-DOpenGL_GL_PREFERENCE=GLVND",
+	"-DUSING_GLES2=ON"
       ],
       "build-commands": [
         "mkdir -p /app/ppsspp /app/bin /app/share/applications",
@@ -60,12 +95,11 @@
           "commit": "087de849bdc74205dd00d8e6e11ba17a591213ab"
         },
         {
-          "type": "file",
-          "path": "rebuild_ffmpeg.sh"
-        },
-        {
           "type": "shell",
-          "commands": ["./rebuild_ffmpeg.sh"]
+          "commands": [
+            "rm -r ffmpeg/linux",
+            "ln -s /app/ffmpeg/linux ffmpeg/linux"
+          ]
         },
         {
           "type": "file",
