@@ -76,9 +76,15 @@
       "no-make-install": true,
       "config-opts": [
         "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DOpenGL_GL_PREFERENCE=GLVND",
-	"-DUSING_GLES2=ON"
+        "-DOpenGL_GL_PREFERENCE=GLVND"
       ],
+      "build-options": {
+        "arch":{
+          "aarch64": {
+            "config-opts": ["-DUSING_GLES2=ON"]
+          }
+        }
+      },
       "build-commands": [
         "mkdir -p /app/ppsspp /app/bin /app/share/applications",
         "install -m755 PPSSPPSDL /app/ppsspp/",
