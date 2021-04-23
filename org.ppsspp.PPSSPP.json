@@ -62,8 +62,13 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "tag": "v1.11.3",
-          "disable-shallow-clone": true
+          "commit": "036efc24ae3367dc88c5e4455ab493556babe454"
+        },
+        {
+          "type": "shell",
+          "commands": [
+            "git checkout v1.11.3"
+          ]
         },
         {
           "type": "script",
