@@ -48,7 +48,7 @@
       },
       "build-commands": [
         "cd ffmpeg && ./build.sh",
-        "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DOpenGL_GL_PREFERENCE=GLVND ${EXTRA_OPTS} .",
+        "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ${EXTRA_OPTS} .",
         "make",
         "mkdir -p /app/ppsspp /app/bin /app/share/applications",
         "install -m755 PPSSPPSDL /app/ppsspp/",
