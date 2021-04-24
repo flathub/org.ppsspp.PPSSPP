@@ -48,12 +48,9 @@
       },
       "build-commands": [
         "cd ffmpeg && ./build.sh",
-        "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ${EXTRA_OPTS} .",
-        "make",
-        "mkdir -p /app/ppsspp /app/bin /app/share/applications",
-        "install -m755 PPSSPPSDL /app/ppsspp/",
-        "ln -s /app/ppsspp/PPSSPPSDL /app/bin/ppsspp",
-        "cp -dr assets /app/ppsspp/",
+        "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=${FLATPAK_DEST} ${EXTRA_OPTS} .",
+        "make -j${FLATPAK_BUILDER_N_JOBS} && make install",
+        "ln -s /app/bin/PPSSPPSDL /app/bin/ppsspp",
         "install -Dm644 icons/icon-512.svg /app/share/icons/hicolor/scalable/apps/ppsspp.svg",
         "install -m644 ppsspp.desktop /app/share/applications/",
         "install -Dm644 appdata.xml /app/share/appdata/ppsspp.appdata.xml"
