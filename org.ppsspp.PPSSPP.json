@@ -65,12 +65,6 @@
           "commit": "036efc24ae3367dc88c5e4455ab493556babe454"
         },
         {
-          "type": "shell",
-          "commands": [
-            "git checkout v1.11.3"
-          ]
-        },
-        {
           "type": "script",
           "dest-filename": "ffmpeg/build.sh",
           "only-arches": ["aarch64"],
