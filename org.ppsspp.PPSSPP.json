@@ -59,7 +59,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "commit": "036efc24ae3367dc88c5e4455ab493556babe454"
+          "commit": "f7ace3b8ee33e97e156f3b07f416301e885472c5"
         },
         {
           "type": "script",
