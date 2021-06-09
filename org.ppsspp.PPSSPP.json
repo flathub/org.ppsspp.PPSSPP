@@ -51,7 +51,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp-ffmpeg.git",
-          "commit": "55147e5f33f5ae4904f75ec082af809267122b94"
+          "commit": "0b28335acea4f429ae798c5e75232e54881bf164"
         },
         {
           "type": "script",
@@ -98,7 +98,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "commit": "087de849bdc74205dd00d8e6e11ba17a591213ab"
+          "commit": "f7ace3b8ee33e97e156f3b07f416301e885472c5"
         },
         {
           "type": "shell",
