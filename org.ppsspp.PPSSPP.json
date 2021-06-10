@@ -47,7 +47,7 @@
         }
       },
       "build-commands": [
-        "cd ffmpeg && ./build.sh",
+        "cd ffmpeg && ../ffmpeg-build.sh",
         "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=${FLATPAK_DEST} ${EXTRA_OPTS} .",
         "make -j${FLATPAK_BUILDER_N_JOBS} && make install",
         "ln -s /app/bin/PPSSPPSDL /app/bin/ppsspp",
@@ -59,11 +59,11 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "commit": "036efc24ae3367dc88c5e4455ab493556babe454"
+          "tags": "v1.11.3"
         },
         {
           "type": "script",
-          "dest-filename": "ffmpeg/build.sh",
+          "dest-filename": "ffmpeg-build.sh",
           "only-arches": ["aarch64"],
           "commands":[
             "rm -r linux",
@@ -73,7 +73,7 @@
         },
         {
           "type": "script",
-          "dest-filename": "ffmpeg/build.sh",
+          "dest-filename": "ffmpeg-build.sh",
           "only-arches": ["x86_64"],
           "commands":["rm -r linux", "./linux_x86-64.sh"]
         },
