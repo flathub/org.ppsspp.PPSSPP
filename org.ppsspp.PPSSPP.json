@@ -59,7 +59,7 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "tags": "v1.11.3"
+          "tag": "v1.11.3"
         },
         {
           "type": "script",
