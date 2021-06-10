@@ -15,9 +15,6 @@
     "--socket=x11",
     "--share=network"
   ],
-  "cleanup": [
-    "/ffmpeg"
-  ],
   "modules": [
     "shared-modules/glu/glu-9.json",
     "shared-modules/glew/glew.json",
@@ -40,56 +37,20 @@
       ]
     },
     {
-      "name": "ppsspp-ffmpeg",
-      "buildsystem": "simple",
-      "build-commands": [
-        "rm -r ./linux",
-        "./build.sh",
-        "mkdir -p /app/ffmpeg && cp -r ./linux /app/ffmpeg/"
-      ],
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://github.com/hrydgard/ppsspp-ffmpeg.git",
-          "commit": "55147e5f33f5ae4904f75ec082af809267122b94"
-        },
-        {
-          "type": "script",
-          "dest-filename": "build.sh",
-          "only-arches": ["aarch64"],
-          "commands":[
-            "sed -i 's/GENERAL=/GENERAL_NO=/' linux_arm64.sh",
-            "./linux_arm64.sh"
-          ]
-        },
-        {
-          "type": "script",
-          "dest-filename": "build.sh",
-          "only-arches": ["x86_64"],
-          "commands":["./linux_x86-64.sh"]
-        }
-      ]
-    },
-    {
       "name": "ppsspp",
-      "buildsystem": "cmake-ninja",
-      "no-make-install": true,
-      "config-opts": [
-        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DOpenGL_GL_PREFERENCE=GLVND"
-      ],
+      "buildsystem": "simple",
       "build-options": {
         "arch":{
           "aarch64": {
-            "config-opts": ["-DUSING_GLES2=ON"]
+            "env": {"EXTRA_OPTS":"-DUSING_GLES2=ON"}
           }
         }
       },
       "build-commands": [
-        "mkdir -p /app/ppsspp /app/bin /app/share/applications",
-        "install -m755 PPSSPPSDL /app/ppsspp/",
-        "ln -s /app/ppsspp/PPSSPPSDL /app/bin/ppsspp",
-        "cp -dr assets /app/ppsspp/",
+        "cd ffmpeg && ../ffmpeg-build.sh",
+        "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=${FLATPAK_DEST} ${EXTRA_OPTS} .",
+        "make -j${FLATPAK_BUILDER_N_JOBS} && make install",
+        "ln -s /app/bin/PPSSPPSDL /app/bin/ppsspp",
         "install -Dm644 icons/icon-512.svg /app/share/icons/hicolor/scalable/apps/ppsspp.svg",
         "install -m644 ppsspp.desktop /app/share/applications/",
         "install -Dm644 appdata.xml /app/share/appdata/ppsspp.appdata.xml"
@@ -98,14 +59,23 @@
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
-          "commit": "087de849bdc74205dd00d8e6e11ba17a591213ab"
+          "tag": "v1.11.3"
         },
         {
-          "type": "shell",
-          "commands": [
-            "rm -r ffmpeg/linux",
-            "ln -s /app/ffmpeg/linux ffmpeg/linux"
+          "type": "script",
+          "dest-filename": "ffmpeg-build.sh",
+          "only-arches": ["aarch64"],
+          "commands":[
+            "rm -r linux",
+            "sed -i 's/GENERAL=/GENERAL_NO=/' linux_arm64.sh",
+            "./linux_arm64.sh"
           ]
+        },
+        {
+          "type": "script",
+          "dest-filename": "ffmpeg-build.sh",
+          "only-arches": ["x86_64"],
+          "commands":["rm -r linux", "./linux_x86-64.sh"]
         },
         {
           "type": "file",
