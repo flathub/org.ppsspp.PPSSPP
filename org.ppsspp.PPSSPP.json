@@ -5,9 +5,6 @@
   "runtime-version": "20.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "ppsspp",
-  "rename-desktop-file": "ppsspp.desktop",
-  "rename-icon": "ppsspp",
-  "rename-appdata-file": "ppsspp.appdata.xml",
   "finish-args": [
     "--device=all",
     "--filesystem=host:ro",
@@ -31,8 +28,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://libzip.org/download/libzip-1.7.1.tar.xz",
-          "sha256": "a020dc1b17a79faa748e43a05f8605d65e403813e8e97ad3a300a90ddba097ac"
+          "url": "https://libzip.org/download/libzip-1.7.3.tar.xz",
+          "sha256": "a60473ffdb7b4260c08bfa19c2ccea0438edac11193c3afbbb1f17fbcf6c6132"
         }
       ]
     },
@@ -46,14 +43,17 @@
           }
         }
       },
+      "cleanup": [
+        "/share/applications/"
+      ],
       "build-commands": [
         "cd ffmpeg && ../ffmpeg-build.sh",
         "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=${FLATPAK_DEST} ${EXTRA_OPTS} .",
         "make -j${FLATPAK_BUILDER_N_JOBS} && make install",
-        "ln -s /app/bin/PPSSPPSDL /app/bin/ppsspp",
-        "install -Dm644 icons/icon-512.svg /app/share/icons/hicolor/scalable/apps/ppsspp.svg",
-        "install -m644 ppsspp.desktop /app/share/applications/",
-        "install -Dm644 appdata.xml /app/share/appdata/ppsspp.appdata.xml"
+        "ln -s ${FLATPAK_DEST}/bin/PPSSPPSDL ${FLATPAK_DEST}/bin/ppsspp",
+        "install -Dm644 icons/icon-512.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+        "install -Dm644 ppsspp.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
+        "install -Dm644 appdata.xml ${FLATPAK_DEST}/share/appdata/${FLATPAK_ID}.appdata.xml"
       ],
       "sources": [
         {
