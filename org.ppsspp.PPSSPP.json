@@ -24,8 +24,7 @@
             "env": {
               "CC": "clang",
               "CXX": "clang++"
-            },
-            "config-opts": ["-DCMAKE_TOOLCHAIN_FILE=cmake/Toolchains/raspberry.armv8.cmake"]
+            }
           }
         }
       },
