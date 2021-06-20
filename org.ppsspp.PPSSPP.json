@@ -4,10 +4,8 @@
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "20.08",
   "sdk": "org.freedesktop.Sdk",
-  "command": "ppsspp",
-  "rename-desktop-file": "ppsspp.desktop",
   "rename-icon": "ppsspp",
-  "rename-appdata-file": "ppsspp.appdata.xml",
+  "command": "PPSSPPSDL",
   "finish-args": [
     "--device=all",
     "--filesystem=host:ro",
@@ -19,67 +17,28 @@
     "shared-modules/glu/glu-9.json",
     "shared-modules/glew/glew.json",
     {
-      "name": "libzip",
-      "buildsystem": "cmake-ninja",
-      "config-opts": ["-DCMAKE_BUILD_TYPE=RelWithDebInfo"],
-      "cleanup": [
-        "/bin",
-        "/include",
-        "/lib/pkgconfig",
-        "/share/man"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://libzip.org/download/libzip-1.7.1.tar.xz",
-          "sha256": "a020dc1b17a79faa748e43a05f8605d65e403813e8e97ad3a300a90ddba097ac"
-        }
-      ]
-    },
-    {
       "name": "ppsspp",
-      "buildsystem": "simple",
+      "buildsystem": "cmake",
       "build-options": {
-        "arch":{
+        "arch": {
           "aarch64": {
-            "env": {"EXTRA_OPTS":"-DUSING_GLES2=ON"}
+            "env": {
+              "CC": "clang",
+              "CXX": "clang++"
+            }
           }
         }
       },
-      "build-commands": [
-        "cd ffmpeg && ../ffmpeg-build.sh",
-        "cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=${FLATPAK_DEST} ${EXTRA_OPTS} .",
-        "make -j${FLATPAK_BUILDER_N_JOBS} && make install",
-        "ln -s /app/bin/PPSSPPSDL /app/bin/ppsspp",
-        "install -Dm644 icons/icon-512.svg /app/share/icons/hicolor/scalable/apps/ppsspp.svg",
-        "install -m644 ppsspp.desktop /app/share/applications/",
-        "install -Dm644 appdata.xml /app/share/appdata/ppsspp.appdata.xml"
+      "post-install": [
+        "mv ${FLATPAK_DEST}/share/applications/{PPSSPPSDL,${FLATPAK_ID}}.desktop",
+        "desktop-file-edit --set-name=PPSSPP --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
+        "install -Dm644 appdata.xml ${FLATPAK_DEST}/share/appdata/${FLATPAK_ID}.appdata.xml"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/hrydgard/ppsspp.git",
           "tag": "v1.11.3"
-        },
-        {
-          "type": "script",
-          "dest-filename": "ffmpeg-build.sh",
-          "only-arches": ["aarch64"],
-          "commands":[
-            "rm -r linux",
-            "sed -i 's/GENERAL=/GENERAL_NO=/' linux_arm64.sh",
-            "./linux_arm64.sh"
-          ]
-        },
-        {
-          "type": "script",
-          "dest-filename": "ffmpeg-build.sh",
-          "only-arches": ["x86_64"],
-          "commands":["rm -r linux", "./linux_x86-64.sh"]
-        },
-        {
-          "type": "file",
-          "path": "ppsspp.desktop"
         },
         {
           "type": "file",
