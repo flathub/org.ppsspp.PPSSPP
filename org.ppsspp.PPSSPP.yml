@@ -45,6 +45,7 @@ modules:
     only-arches: 
       - aarch64
     commands:
+      - sed -i 's/GENERAL=/GENERAL_NO=/' linux_arm64.sh
       - ./linux_arm64.sh
 
   - type: script
