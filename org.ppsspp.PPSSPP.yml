@@ -4,6 +4,7 @@ runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 rename-icon: ppsspp
 rename-desktop-file: PPSSPPSDL.desktop
+rename-appdata-file: appdata.xml
 command: PPSSPPSDL
 finish-args:
   - --device=all
@@ -31,11 +32,11 @@ modules:
       - make -j${FLATPAK_BUILDER_N_JOBS} && make install
     post-install:
       - desktop-file-edit --set-name=PPSSPP --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
-      - install -Dm644 appdata.xml ${FLATPAK_DEST}/share/appdata/${FLATPAK_ID}.appdata.xml
+      - install -Dm644 appdata.xml -t ${FLATPAK_DEST}/share/appdata
     sources:
       - type: git
         url: https://github.com/hrydgard/ppsspp.git
-        tag: v1.11.3
+        tag: v1.12
 
       - type: file
         path: appdata.xml
