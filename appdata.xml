@@ -21,6 +21,7 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
+    <release version="1.12.3" date="2021-10-18"></release>
     <release version="1.12" date="2021-10-8">
       <description>
         <p>What&#39;s new in 1.12</p>

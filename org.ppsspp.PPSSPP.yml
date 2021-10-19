@@ -36,7 +36,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/hrydgard/ppsspp.git
-        tag: v1.12
+        tag: v1.12.3
 
       - type: file
         path: appdata.xml
