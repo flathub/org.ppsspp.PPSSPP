@@ -4,54 +4,56 @@ runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 rename-icon: ppsspp
 rename-desktop-file: PPSSPPSDL.desktop
-rename-appdata-file: appdata.xml
 command: PPSSPPSDL
 finish-args:
   - --device=all
   - --filesystem=host:ro
   - --socket=pulseaudio
   - --socket=x11
+  - --socket=wayland
   - --share=network
 modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
+
   - name: ppsspp
-    buildsystem: simple
+    buildsystem: cmake
+    config-opts:
+    - '-DUSE_SYSTEM_FFMPEG=OFF'
+    - '-DUSE_SYSTEM_LIBZIP=ON'
+    - '-DUSE_SYSTEM_ZSTD=ON'
+    #- '-DUSE_SYSTEM_SNAPPY=ON'
+
+    - '-DUSE_WAYLAND_WSI=ON'
+    - '-DUSING_X11_VULKAN=ON'
+    - '-DUSING_QT_UI=OFF'
+
+    - '-DBUILD_TESTING=OFF'
+    - '-DOpenGL_GL_PREFERENCE=GLVND'
     build-options:
       arch:
+        x86_64:
+          config-opts:
+            - '-DX86_64=ON'
         aarch64:
-          env:
-            EXTRA_OPTS: '-DUSING_GLES2=ON'
-    build-commands:
-      - cd ffmpeg && rm -r linux && ../build-ffmpeg.sh
-      - cmake 
-        -DCMAKE_BUILD_TYPE=RelWithDebInfo 
-        -DCMAKE_INSTALL_PREFIX=${FLATPAK_DEST} 
-        ${EXTRA_OPTS} 
-        .
-      - make -j${FLATPAK_BUILDER_N_JOBS} && make install
+          config-opts:
+            - '-DUSING_EGL=ON'
+            - '-DUSING_GLES2=ON'
+            - '-DARM64=ON'
     post-install:
-      - desktop-file-edit --set-name=PPSSPP --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
-      - install -Dm644 appdata.xml -t ${FLATPAK_DEST}/share/appdata
+      - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
+      - install -Dm644 ${FLATPAK_ID}.appdata.xml -t ${FLATPAK_DEST}/share/appdata
     sources:
       - type: git
         url: https://github.com/hrydgard/ppsspp.git
         tag: v1.12.3
 
+      - type: shell
+        commands:
+          # fix ffmpeg link issue on aarch64
+          - |
+            cd ffmpeg
+            git checkout 70bfd4a77487e56ef60b4adfc47f714cfea59794
+
       - type: file
-        path: appdata.xml
-
-      - type: script
-        dest-filename: build-ffmpeg.sh
-        only-arches: 
-          - aarch64
-        commands:
-          - sed -i 's/GENERAL=/GENERAL_NO=/' linux_arm64.sh
-          - ./linux_arm64.sh
-
-      - type: script
-        dest-filename: build-ffmpeg.sh
-        only-arches: 
-          - x86_64
-        commands:
-          - ./linux_x86-64.sh
+        path: org.ppsspp.PPSSPP.appdata.xml
