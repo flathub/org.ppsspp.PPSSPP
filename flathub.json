@@ -1,3 +1,4 @@
 {
-  "skip-arches": ["arm"]
+  "skip-arches": ["arm"],
+  "automerge-flathubbot-prs": false
 }
