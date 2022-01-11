@@ -11,6 +11,7 @@ finish-args:
   - --socket=pulseaudio
   - --socket=x11
   - --socket=wayland
+  - --share=ipc
   - --share=network
 modules:
   - shared-modules/glu/glu-9.json
