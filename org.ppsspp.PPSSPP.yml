@@ -43,7 +43,7 @@ modules:
             - '-DARM64=ON'
     post-install:
       - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
-      - install -Dm644 ${FLATPAK_ID}.appdata.xml -t ${FLATPAK_DEST}/share/appdata
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
     sources:
       - type: git
         url: https://github.com/hrydgard/ppsspp.git
@@ -62,4 +62,4 @@ modules:
             git checkout 70bfd4a77487e56ef60b4adfc47f714cfea59794
 
       - type: file
-        path: org.ppsspp.PPSSPP.appdata.xml
+        path: org.ppsspp.PPSSPP.metainfo.xml
