@@ -20,38 +20,38 @@ modules:
   - name: ppsspp
     buildsystem: cmake
     config-opts:
-    - '-DUSE_SYSTEM_FFMPEG=OFF'
-    - '-DUSE_SYSTEM_LIBZIP=ON'
-    - '-DUSE_SYSTEM_ZSTD=ON'
+      - -DUSE_SYSTEM_FFMPEG=OFF
+      - -DUSE_SYSTEM_LIBZIP=ON
+      - -DUSE_SYSTEM_ZSTD=ON
     #- '-DUSE_SYSTEM_SNAPPY=ON'
 
-    - '-DUSE_WAYLAND_WSI=ON'
-    - '-DUSING_X11_VULKAN=ON'
-    - '-DUSING_QT_UI=OFF'
+      - -DUSE_WAYLAND_WSI=ON
+      - -DUSING_X11_VULKAN=ON
+      - -DUSING_QT_UI=OFF
 
-    - '-DBUILD_TESTING=OFF'
-    - '-DOpenGL_GL_PREFERENCE=GLVND'
+      - -DBUILD_TESTING=OFF
+      - -DOpenGL_GL_PREFERENCE=GLVND
     build-options:
       arch:
         x86_64:
           config-opts:
-            - '-DX86_64=ON'
+            - -DX86_64=ON
         aarch64:
           config-opts:
-            - '-DUSING_EGL=ON'
-            - '-DUSING_GLES2=ON'
-            - '-DARM64=ON'
+            - -DUSING_EGL=ON
+            - -DUSING_GLES2=ON
+            - -DARM64=ON
     post-install:
       - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
     sources:
       - type: git
         url: https://github.com/hrydgard/ppsspp.git
-        tag: v1.12.3
-        commit: ce0a45cf0fcdd5bebf32208b9998f68dfc1107b7
+        tag: v1.13
+        commit: a92e764c65b3248d1ddd7107ffa4c598a2ef4ff2
         x-checker-data:
           type: git
-          tag-pattern: "^v([\\d.]+)$"
+          tag-pattern: ^v([\d.]+)$
           is-main-source: true
 
       - type: shell

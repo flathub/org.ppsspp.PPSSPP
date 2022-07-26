@@ -21,10 +21,11 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
-    <release version="1.12.3" date="2021-10-18"></release>
+    <release version="1.13" date="2022-07-26"/>
+    <release version="1.12.3" date="2021-10-18"/>
     <release version="1.12" date="2021-10-8">
       <description>
-        <p>What&#39;s new in 1.12</p>
+        <p>What's new in 1.12</p>
         <p>Platform support:</p>
         <ul>
           <li>Add support for Android 12 Scoped Storage restrictions ([#11997])</li>
@@ -47,11 +48,11 @@
         </ul>
         <p>Graphics and Sound:</p>
         <ul>
-          <li>Add new texture filtering mode &quot;Auto Max Quality&quot; ([#14789])</li>
+          <li>Add new texture filtering mode "Auto Max Quality" ([#14789])</li>
           <li>Fix Princess Maker 5 Portable half screen in Vulkan ([#13741])</li>
           <li>Fix Pro Yakyu Spirits 2010 (NPJH50234): Rendering errors with hardware transform off  ([#14167])</li>
           <li>Support texture replacement filtering overrides ([#14230])</li>
-          <li>Fix Yarudora Portable: Double Cast&#39;s FMVs artifacting  ([#13759])</li>
+          <li>Fix Yarudora Portable: Double Cast's FMVs artifacting  ([#13759])</li>
           <li>Fix Sims 2 Castaway/Pets EA Logo glitched out ([#13146])</li>
           <li>Fix bad size &amp; position on Japanese &amp; Numbers &amp; Alphabets ([#14209])</li>
           <li>Implement basic depth texturing for OpenGL ([#14042])</li>
@@ -63,7 +64,7 @@
         </ul>
         <p>UI:</p>
         <ul>
-          <li>Add a setting for choosing background animation in PPSSPP&#39;s menus ([#14313], [#14818], [#14810], [#14347])</li>
+          <li>Add a setting for choosing background animation in PPSSPP's menus ([#14313], [#14818], [#14810], [#14347])</li>
           <li>Add CRC calculation on game info screen and feedback screen ([#14000], [#14041])</li>
           <li>Add a Storage tab to System Information with some path info ([#14224], [#14238])</li>
           <li>Track and show memory allocation / usage information in debugger ([#14056])</li>
@@ -94,7 +95,7 @@
           <li>Fix crashing issue when leaving a multiplayer game room (ie. GTA Vice City Stories) ([#14342])</li>
           <li>Fix stuck issue when scanning AP to Recruit on MGS:PW ([#14345])</li>
           <li>Fix possible crash issue on blocking socket implementation (ie. Kao Challengers) ([#14466])</li>
-          <li>Create GameMode&#39;s socket after Master and all Replicas have been created (ie. Fading Shadows) ([#14492])</li>
+          <li>Create GameMode's socket after Master and all Replicas have been created (ie. Fading Shadows) ([#14492])</li>
           <li>Reduce HLE delays due to multiplayer performance regressions (ie. Ys vs. Sora no Kiseki) ([#14513])</li>
           <li>Fix socket error 10014 on Windows when hosting a game of Vulcanus Seek and Destroy ([#14849])</li>
         </ul>
@@ -215,6 +216,6 @@
       </description>
     </release>
   </releases>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <update_contact>b@bpiotrowski.pl</update_contact>
 </component>
