@@ -23,24 +23,18 @@ modules:
       - -DUSE_SYSTEM_FFMPEG=OFF
       - -DUSE_SYSTEM_LIBZIP=ON
       - -DUSE_SYSTEM_ZSTD=ON
-    #- '-DUSE_SYSTEM_SNAPPY=ON'
 
       - -DUSE_WAYLAND_WSI=ON
-      - -DUSING_X11_VULKAN=ON
       - -DUSING_QT_UI=OFF
 
       - -DBUILD_TESTING=OFF
       - -DOpenGL_GL_PREFERENCE=GLVND
     build-options:
       arch:
-        x86_64:
-          config-opts:
-            - -DX86_64=ON
         aarch64:
           config-opts:
             - -DUSING_EGL=ON
             - -DUSING_GLES2=ON
-            - -DARM64=ON
     post-install:
       - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
@@ -53,13 +47,6 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
           is-main-source: true
-
-      - type: shell
-        commands:
-          # fix ffmpeg link issue on aarch64
-          - |
-            cd ffmpeg
-            git checkout 70bfd4a77487e56ef60b4adfc47f714cfea59794
 
       - type: file
         path: org.ppsspp.PPSSPP.metainfo.xml
