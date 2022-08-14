@@ -13,6 +13,7 @@ finish-args:
   - --socket=wayland
   - --share=ipc
   - --share=network
+  - --talk-name=org.freedesktop.ScreenSaver
 modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
