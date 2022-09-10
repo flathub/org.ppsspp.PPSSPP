@@ -21,6 +21,7 @@
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
   <releases>
+    <release version="1.13.2" date="2022-09-10"/>
     <release version="1.13.1" date="2022-07-28"/>
     <release version="1.13" date="2022-07-26"/>
     <release version="1.12.3" date="2021-10-18"/>
