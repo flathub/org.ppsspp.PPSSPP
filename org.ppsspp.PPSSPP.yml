@@ -1,6 +1,6 @@
 app-id: org.ppsspp.PPSSPP
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 rename-icon: ppsspp
 rename-desktop-file: PPSSPPSDL.desktop
