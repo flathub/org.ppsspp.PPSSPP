@@ -8,6 +8,7 @@ command: PPSSPPSDL
 finish-args:
   - --device=all
   - --filesystem=host:ro
+  - --filesystem=xdg-run/app/com.discordapp.Discord:create
   - --socket=pulseaudio
   - --socket=x11
   - --socket=wayland
