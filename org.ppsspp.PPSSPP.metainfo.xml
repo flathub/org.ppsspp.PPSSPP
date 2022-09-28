@@ -2,32 +2,236 @@
 <component type="desktop">
   <id>org.ppsspp.PPSSPP</id>
   <name>PPSSPP</name>
-  <summary>A PlayStation Portable emulator</summary>
+  <summary>A PlayStation&#x00a0;Portable emulator</summary>
+  <summary xml:lang="de">Ein PlayStation&#x00a0;Portable&#x2011;Emulator</summary>
+  <summary xml:lang="pl">Emulator PlayStation&#x00a0;Portable</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
   <description>
     <p>
-      PPSSPP is a PSP emulator that can run games full HD resolution. It can
+      PPSSPP is a PSP emulator that can run games in full HD resolution. It can
       even upscale textures that would otherwise be too blurry as they were made
       for the small screen of the original PSP.
     </p>
+    <p xml:lang="de">
+      PPSSPP ist ein PSP&#x2011;Emulator, der Spiele in voller HD&#x2011;Auflösung
+      abspielen kann. Er kann sogar Texturen höher skalieren, welche ansonsten 
+      zu verwaschen wären, da sie für den kleinen Bildschirm der ursprünglichen
+      PSP erstellt wurden.
+    </p>
+    <p xml:lang="pl">
+      PPSSPP, to emulator PSP, który potrafi odtwarzać gry w pełnej rozdzielczości
+      HD. Jest nawet w stanie przeskalować tekstury na większe, które w innym
+      przypadku byłyby za bardzo rozmazane, ponieważ zostały stworzone na mały
+      ekran pierwotnej PSP.
+    </p>
   </description>
-  <url type="homepage">http://www.ppsspp.org/</url>
+  <developer_name>Henrik Rydgård</developer_name>
+  <url type="homepage">https://www.ppsspp.org/</url>
   <url type="bugtracker">https://github.com/hrydgard/ppsspp/issues</url>
+  <url type="help">https://www.ppsspp.org/guides.html</url>
+  <url type="faq">https://www.ppsspp.org/faq.html</url>
+  <url type="vcs-browser">https://github.com/hrydgard/ppsspp</url>
+  <url type="contribute">https://www.ppsspp.org/development.html</url>
+  <url type="translate">https://github.com/hrydgard/ppsspp/tree/master/assets/lang</url>
   <screenshots>
     <screenshot type="default">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/1.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/2.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
   </screenshots>
+  <icon type="remote">https://raw.githubusercontent.com/hrydgard/ppsspp/master/icons/icon-512.svg</icon>
   <releases>
-    <release version="1.13.2" date="2022-09-11"/>
-    <release version="1.13.1" date="2022-07-28"/>
-    <release version="1.13" date="2022-07-26"/>
-    <release version="1.12.3" date="2021-10-18"/>
-    <release version="1.12" date="2021-10-8">
+    <release version="1.13.2" date="2022-09-10T13:55:49Z">
       <description>
-        <p>What's new in 1.12</p>
+        <p>What&apos;s new in 1.13.2</p>
+        <p>
+          <ul>
+            <li>Crashfix on Android 12 when playing certain background music ([#15990])</li>
+            <li>Fix Star Ocean battles in D3D backends (#[15889])</li>
+            <li>Minor fixes that might fix some other crashes</li>
+          </ul>
+        </p>
+      </description>
+      <issues>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/15889">#15889</issue>
+      </issues>
+      <artifacts>
+        <artifact type="binary" platform="x86_64-macos-any">
+          <location>https://github.com/hrydgard/ppsspp/releases/download/v1.13.2/PPSSPPSDL-macOS-v1.13.2.zip</location>
+          <checksum type="sha1">86b2943c68014f261ccf1216c7b93cb75f777eb0</checksum>
+          <checksum type="sha256">6d047749b4c9566ee579e11375c6b8483fe2da95657db9a2f5f8eaeb7bef2b32</checksum>
+          <size type="download">29869992</size>
+        </artifact>
+        <artifact type="binary" platform="i386-windows-msvc">
+          <location>https://ppsspp.org/files/1_13_2/ppsspp_win.zip</location>
+          <checksum type="sha1">cfebaf2abba7b82234c793adff470747b5592e83</checksum>
+          <checksum type="sha256">e73c5d639bdf7c39edb1263830f49a84d6061bd64810cd69994911e10faaeb20</checksum>
+          <size type="download">23773114</size>
+        </artifact>
+        <artifact type="binary" platform="x86_64-windows-msvc">
+          <location>https://ppsspp.org/files/1_13_2/ppsspp_win.zip</location>
+          <checksum type="sha1">cfebaf2abba7b82234c793adff470747b5592e83</checksum>
+          <checksum type="sha256">e73c5d639bdf7c39edb1263830f49a84d6061bd64810cd69994911e10faaeb20</checksum>
+          <size type="download">23773114</size>
+        </artifact>
+        <artifact type="binary" platform="aarch64-windows-msvc">
+          <location>https://ppsspp.org/files/1_13_2/PPSSPPWindowsARM64.zip</location>
+          <checksum type="sha1">de4f80b8acfc8d7dede6d9b16607fd07bf51cf45</checksum>
+          <checksum type="sha256">98b964a82464ddacc0abe1830f29ffb2094825df6b20c608426c3455f2b9eff8</checksum>
+          <size type="download">14243817</size>
+        </artifact>
+        <artifact type="binary" platform="i386-linux-android">
+          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
+          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
+          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
+          <size type="download">39721928</size>
+        </artifact>
+        <artifact type="binary" platform="x86_64-linux-android">
+          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
+          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
+          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
+          <size type="download">39721928</size>
+        </artifact>
+        <artifact type="binary" platform="arm-linux-android">
+          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
+          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
+          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
+          <size type="download">39721928</size>
+        </artifact>
+        <artifact type="binary" platform="aarch64-linux-android">
+          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
+          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
+          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
+          <size type="download">39721928</size>
+        </artifact>
+        <artifact type="source">
+          <location>https://github.com/hrydgard/ppsspp/releases/download/v1.13.2/ppsspp-1.13.2.tar.xz</location>
+          <checksum type="sha1">6a5534048d897c184cb6b67410335810798ee53b</checksum>
+          <checksum type="sha256">df0edaff6ccee55d5bc245ef84190801279214ec2e3d1d3673329e01662764ee</checksum>
+          <size type="download">40363040</size>
+        </artifact>
+        <artifact type="source">
+          <location>https://github.com/hrydgard/ppsspp/archive/refs/tags/v1.13.2.zip</location>
+          <checksum type="sha1">74a54df7f4c1f36df03fcb2a7c498cbea7f14ecd</checksum>
+          <checksum type="sha256">55fbbe9049c20b7a5e4bb2eef3dacbc3eb7686755336978c7ce265994bce38a5</checksum>
+          <size type="download">32872544</size>
+        </artifact>
+        <artifact type="source">
+          <location>https://github.com/hrydgard/ppsspp/archive/refs/tags/v1.13.2.tar.gz</location>
+          <checksum type="sha1">de8246f94182206edbcdd3d29722928e1f8521b6</checksum>
+          <checksum type="sha256">1a7d9962ac47feb2bf2866fee9aea7883352a6334a14436d8e02d37a6fa68943</checksum>
+          <size type="download">31676739</size>
+        </artifact>
+      </artifacts>
+    </release>
+    <release version="1.13.1b" date="2022-09-10T14:24:51Z"/>
+    <release version="1.13.1" date="2022-07-28T13:39:55Z">
+      <description>
+        <p>What&apos;s new in 1.13.1</p>
+        <p>
+          <ul>
+            <li>Confirmation dialog added before change of MAC address (#15738)</li>
+            <li>IR interpreter regression fixed (#15739)</li>
+            <li>Fix clearing of replacement texture cache (#15740)</li>
+            <li>Improved Portuguese-pt translation (#15734)</li>
+            <li>Fix graphical regression in Split/Second (#15733)</li>
+            <li>Couple of minor crash fixes</li>
+          </ul>
+        </p>
+      </description>
+      <issues>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/15733">#15733</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/15734">#15734</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/15738">#15738</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/15739">#15739</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/15889">#15740</issue>
+      </issues>
+    </release>
+    <release version="1.13" date="2022-07-26">
+      <description>
+        <p>What&apos;s new in 1.13</p>
+        <p>General</p>
+        <p>
+          <ul>
+            <li>Fix assorted Android &quot;scoped storage&quot;-related bugs and performance issues (#15237, #15487), etc.</li>
+            <li>Analog mapping for fast-forward (#15645)</li>
+            <li>Major softgpu accuracy fixes and speedups, including a JIT (#15163, #15345, #15389, #15529, #15440, #15410, #15405, #15400) and many, many more</li>
+            <li>Fixed some NEON code paths (#15481)</li>
+            <li>Fix performance of texture uploads with Vulkan (#15474)</li>
+            <li>Don&apos;t include the large font atlas when we don&apos;t need it</li>
+            <li>Improved upscaling shaders (#15566)</li>
+            <li>Vulkan texture upscaling performance improvements (#15238), etc.</li>
+            <li>Vulkan correctness fixes (#15217, #15211), use the VMA allocator (#15162), etc.</li>
+            <li>Fixes to depth culling (#15106), many more</li>
+            <li>Background loading of texture replacement (#15025)</li>
+            <li>Threading manager improvements and fixes (#15470), etc.</li>
+            <li>Added search in settings (#14414)</li>
+            <li>Added fast button repeats on custom touch buttons (#15613)</li>
+            <li>Two new bicubic upscaling shader: Catmull-Rom and Mitchell-Netravali (#15569)</li>
+            <li>Allow to change screen rotation per game and to bind a key to change it (#15494, #15510)</li>
+            <li>Re-enabled software rendering option on Android (#12958)</li>
+          </ul>
+        </p>
+        <p>Game fixes</p>
+        <p>
+          <ul>
+            <li>Add more workarounds for Mali driver bugs (#15016)</li>
+            <li>Vortex in God of War: Ghost of Sparta can now be passed (#15640)</li>
+            <li>Various proAdhoc fixes (#15213, #15215), and many more</li>
+            <li>Correct flickering text in Sol Trigger and Last Ranker. (#15549)</li>
+            <li>Fix and improve line drawing in Echochrome (#15583), after line refactoring (#15073, #15075)</li>
+            <li>Fix HUD graphics in Split/Second (#15500, #15501)</li>
+            <li>Fix bad screen overlay issues in Clone Wars and Force Unleashed (#15691, #15696, #12949, #9572)</li>
+            <li>Zettai Zetsumei Toshi 3 no longer hangs on character select screen (#15687)</li>
+            <li>Juiced 2: Bloom effect no longer covering the screen (#7295, #15717)</li>
+            <li>Fix keyboard shift issue in a few games (#15698)</li>
+          </ul>
+        </p>
+        <p>UI</p>
+        <p>
+          <ul>
+            <li>Windows/Xbox UWP directory navigation improvements (#15652)</li>
+            <li>Color change and basic theme support (#15396, #15394)</li>
+            <li>Fix input focus bug (#15560)</li>
+            <li>New GE debugger features and other UI fixes (#15393, #15324, #15377, #15424, #15402, #15378, #15338), etc.</li>
+          </ul>
+        </p>
+      </description>
+    </release>
+    <release version="1.12.3" date="2021-10-18T18:38:20Z">
+      <description>
+        <p>What&apos;s new in 1.12.3</p>
+        <p>
+          <ul>
+            <li>Fix background music speed. A couple translation fixes.</li>
+          </ul>
+        </p>
+      </description>
+    </release>
+    <release version="1.12.2" date="2021-10-10T11:28:40Z">
+      <description>
+        <p>What&apos;s new in 1.12.2</p>
+        <p>
+          <ul>
+            <li>Fix joystick detection bug on Android.</li>
+          </ul>
+        </p>
+      </description>
+    </release>
+    <release version="1.12.1" date="2021-10-09T08:47:43Z">
+      <description>
+        <p>What&apos;s new in 1.12.1</p>
+        <p>
+          <ul>
+            <li>Bug fixes (control mapping fix, popup menus in the Windows debugger, a few crashfixes)</li>
+          </ul>
+        </p>
+      </description>
+    </release>
+    <release version="1.12" date="2021-10-07T14:39:21Z">
+      <description>
+        <p>What&apos;s new in 1.12</p>
         <p>Platform support:</p>
         <ul>
           <li>Add support for Android 12 Scoped Storage restrictions ([#11997])</li>
@@ -50,11 +254,11 @@
         </ul>
         <p>Graphics and Sound:</p>
         <ul>
-          <li>Add new texture filtering mode "Auto Max Quality" ([#14789])</li>
+          <li>Add new texture filtering mode &quot;Auto Max Quality&quot; ([#14789])</li>
           <li>Fix Princess Maker 5 Portable half screen in Vulkan ([#13741])</li>
           <li>Fix Pro Yakyu Spirits 2010 (NPJH50234): Rendering errors with hardware transform off  ([#14167])</li>
           <li>Support texture replacement filtering overrides ([#14230])</li>
-          <li>Fix Yarudora Portable: Double Cast's FMVs artifacting  ([#13759])</li>
+          <li>Fix Yarudora Portable: Double Cast&apos;s FMVs artifacting  ([#13759])</li>
           <li>Fix Sims 2 Castaway/Pets EA Logo glitched out ([#13146])</li>
           <li>Fix bad size &amp; position on Japanese &amp; Numbers &amp; Alphabets ([#14209])</li>
           <li>Implement basic depth texturing for OpenGL ([#14042])</li>
@@ -66,7 +270,7 @@
         </ul>
         <p>UI:</p>
         <ul>
-          <li>Add a setting for choosing background animation in PPSSPP's menus ([#14313], [#14818], [#14810], [#14347])</li>
+          <li>Add a setting for choosing background animation in PPSSPP&apos;s menus ([#14313], [#14818], [#14810], [#14347])</li>
           <li>Add CRC calculation on game info screen and feedback screen ([#14000], [#14041])</li>
           <li>Add a Storage tab to System Information with some path info ([#14224], [#14238])</li>
           <li>Track and show memory allocation / usage information in debugger ([#14056])</li>
@@ -97,7 +301,7 @@
           <li>Fix crashing issue when leaving a multiplayer game room (ie. GTA Vice City Stories) ([#14342])</li>
           <li>Fix stuck issue when scanning AP to Recruit on MGS:PW ([#14345])</li>
           <li>Fix possible crash issue on blocking socket implementation (ie. Kao Challengers) ([#14466])</li>
-          <li>Create GameMode's socket after Master and all Replicas have been created (ie. Fading Shadows) ([#14492])</li>
+          <li>Create GameMode&apos;s socket after Master and all Replicas have been created (ie. Fading Shadows) ([#14492])</li>
           <li>Reduce HLE delays due to multiplayer performance regressions (ie. Ys vs. Sora no Kiseki) ([#14513])</li>
           <li>Fix socket error 10014 on Windows when hosting a game of Vulcanus Seek and Destroy ([#14849])</li>
         </ul>
@@ -105,7 +309,7 @@
     </release>
     <release version="1.11.3" date="2021-06-10">
       <description>
-        <p>What's new in 1.11.3:</p>
+        <p>What&apos;s new in 1.11.3:</p>
         <ul>
           <li>Fix for graphics glitches in the on-screen keyboard</li>
         </ul>
@@ -113,7 +317,7 @@
     </release>
     <release version="1.11.2" date="2021-02-14">
       <description>
-        <p>What's new in 1.11.2:</p>
+        <p>What&apos;s new in 1.11.2:</p>
         <ul>
           <li>An additional few crash fixes(#14129, #14134, #14132)</li>
         </ul>
@@ -121,7 +325,7 @@
     </release>
     <release version="1.11.1" date="2021-02-11">
       <description>
-        <p>What's new in 1.11.1:</p>
+        <p>What&apos;s new in 1.11.1:</p>
         <ul>
           <li>A few crash fixes (#14085, #14089, #14091, #14092), a few adhoc fixes</li>
           <li>Glitchy menu audio on some devices (#14101), in-game UI font memory leak (#14078)</li>
@@ -131,7 +335,7 @@
     </release>
     <release version="1.11.0" date="2021-02-07">
       <description>
-        <p>What's new in 1.11.0:</p>
+        <p>What&apos;s new in 1.11.0:</p>
         <ul>
           <li>Lots of minor bug fixes, crash fixes, and performance fixes and improvements.</li>
           <li>New Browse... button to allow opening SD cards on Android 11</li>
@@ -153,10 +357,10 @@
           <li>Performance fix for Test Drive Unlimited (#13355, ...)</li>
           <li>Allow rewind on mobile (#13866)</li>
           <li>Added option to disable on-screen messages (#13695)</li>
-          <li>Added "Lower resolution for effects" on libretro (#13654)</li>
+          <li>Added &quot;Lower resolution for effects&quot; on libretro (#13654)</li>
           <li>Allow chaining multiple post-processing shaders (#12924)</li>
           <li>Support for loading game-specific plugins (#13335)</li>
-          <li>Fixed Assassin's Creed: Bloodlines Save issue on Android (#12761)</li>
+          <li>Fixed Assassin&apos;s Creed: Bloodlines Save issue on Android (#12761)</li>
           <li>Hanayaka Nari Wa ga Ichizoku: mono voices fixed (#5213)</li>
           <li>Additional fixed games:</li>
           <li>Namco Museum - Battle Collection, Vol 2 ([#9523], [#13297], [#13298])</li>
@@ -183,7 +387,7 @@
     </release>
     <release version="1.6" date="2018-05-26">
       <description>
-        <p>What's new in 1.6</p>
+        <p>What&apos;s new in 1.6</p>
         <ul>
           <li>OpenGL backend now properly multithreaded, giving a good speed boost.</li>
           <li>Various Vulkan performance improvements and memory allocation fixes.</li>
@@ -203,7 +407,7 @@
         <ul>
           <li>Full Vulkan support, also for Android now. Very fast on supported devices. (#10033, #10049)</li>
           <li>Smarter graphics state management, reduced CPU consumption on all backends (#9899)</li>
-          <li>Android: Support for Arabic and other scripts we couldn't support before</li>
+          <li>Android: Support for Arabic and other scripts we couldn&apos;t support before</li>
           <li>Fixes to video dumping</li>
           <li>Fix Android widgets, screen scaling (#10145)</li>
           <li>Geometry problems fixed in Medal of Honor</li>
@@ -211,13 +415,37 @@
           <li>Software rendering improvements, speed and accuracy</li>
           <li>Partial sceUsbGps and sceUsbCam support (Android)</li>
           <li>Hardware tesselation of PSP Beziers and Splines (used by a few games)</li>
-          <li>Android "Sustained performance mode" to avoid thermal throttling (#9901)</li>
+          <li>Android &quot;Sustained performance mode&quot; to avoid thermal throttling (#9901)</li>
           <li>Linux controller mapping fixes (#9997)</li>
           <li>Assorted bugfixes and compatibility improvements</li>
         </ul>
       </description>
     </release>
   </releases>
+  <categories>
+    <category>Game</category>
+    <category>Emulator</category>
+  </categories>
+  <keywords>
+    <keyword translate="no">Sony</keyword>
+    <keyword translate="no">PlayStation</keyword>
+    <keyword translate="no">Portable</keyword>
+    <keyword translate="no">PSP</keyword>
+    <keyword>emulator</keyword>
+    <keyword xml:lang="de">Emulator</keyword>
+    <keyword xml:lang="pl">emulator</keyword>
+    <keyword>handheld</keyword>
+    <keyword xml:lang="de">handlich</keyword>
+    <keyword xml:lang="pl">ręczna</keyword>
+    <keyword>console</keyword>
+    <keyword xml:lang="de">Konsole</keyword>
+    <keyword xml:lang="pl">konsola</keyword>
+  </keywords>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>gamepad</control>
+  </supports>
   <content_rating type="oars-1.1"/>
   <update_contact>b@bpiotrowski.pl</update_contact>
 </component>
