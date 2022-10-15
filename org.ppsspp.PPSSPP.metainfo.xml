@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop" xmlns="https://specifications.freedesktop.org/metainfo/1.0">
   <id>org.ppsspp.PPSSPP</id>
   <name>PPSSPP</name>
   <summary>A PlayStation&#x00a0;Portable emulator</summary>
@@ -45,13 +45,11 @@
     <release version="1.13.2" date="2022-09-10T13:55:49Z">
       <description>
         <p>What&apos;s new in 1.13.2</p>
-        <p>
-          <ul>
-            <li>Crashfix on Android 12 when playing certain background music ([#15990])</li>
-            <li>Fix Star Ocean battles in D3D backends (#[15889])</li>
-            <li>Minor fixes that might fix some other crashes</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Crashfix on Android 12 when playing certain background music ([#15990])</li>
+          <li>Fix Star Ocean battles in D3D backends (#[15889])</li>
+          <li>Minor fixes that might fix some other crashes</li>
+        </ul>
       </description>
       <issues>
         <issue url="https://github.com/hrydgard/ppsspp/issues/15889">#15889</issue>
@@ -129,16 +127,14 @@
     <release version="1.13.1" date="2022-07-28T13:39:55Z">
       <description>
         <p>What&apos;s new in 1.13.1</p>
-        <p>
-          <ul>
-            <li>Confirmation dialog added before change of MAC address (#15738)</li>
-            <li>IR interpreter regression fixed (#15739)</li>
-            <li>Fix clearing of replacement texture cache (#15740)</li>
-            <li>Improved Portuguese-pt translation (#15734)</li>
-            <li>Fix graphical regression in Split/Second (#15733)</li>
-            <li>Couple of minor crash fixes</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Confirmation dialog added before change of MAC address (#15738)</li>
+          <li>IR interpreter regression fixed (#15739)</li>
+          <li>Fix clearing of replacement texture cache (#15740)</li>
+          <li>Improved Portuguese-pt translation (#15734)</li>
+          <li>Fix graphical regression in Split/Second (#15733)</li>
+          <li>Couple of minor crash fixes</li>
+        </ul>
       </description>
       <issues>
         <issue url="https://github.com/hrydgard/ppsspp/issues/15733">#15733</issue>
@@ -152,81 +148,69 @@
       <description>
         <p>What&apos;s new in 1.13</p>
         <p>General</p>
-        <p>
-          <ul>
-            <li>Fix assorted Android &quot;scoped storage&quot;-related bugs and performance issues (#15237, #15487), etc.</li>
-            <li>Analog mapping for fast-forward (#15645)</li>
-            <li>Major softgpu accuracy fixes and speedups, including a JIT (#15163, #15345, #15389, #15529, #15440, #15410, #15405, #15400) and many, many more</li>
-            <li>Fixed some NEON code paths (#15481)</li>
-            <li>Fix performance of texture uploads with Vulkan (#15474)</li>
-            <li>Don&apos;t include the large font atlas when we don&apos;t need it</li>
-            <li>Improved upscaling shaders (#15566)</li>
-            <li>Vulkan texture upscaling performance improvements (#15238), etc.</li>
-            <li>Vulkan correctness fixes (#15217, #15211), use the VMA allocator (#15162), etc.</li>
-            <li>Fixes to depth culling (#15106), many more</li>
-            <li>Background loading of texture replacement (#15025)</li>
-            <li>Threading manager improvements and fixes (#15470), etc.</li>
-            <li>Added search in settings (#14414)</li>
-            <li>Added fast button repeats on custom touch buttons (#15613)</li>
-            <li>Two new bicubic upscaling shader: Catmull-Rom and Mitchell-Netravali (#15569)</li>
-            <li>Allow to change screen rotation per game and to bind a key to change it (#15494, #15510)</li>
-            <li>Re-enabled software rendering option on Android (#12958)</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Fix assorted Android &quot;scoped storage&quot;-related bugs and performance issues (#15237, #15487), etc.</li>
+          <li>Analog mapping for fast-forward (#15645)</li>
+          <li>Major softgpu accuracy fixes and speedups, including a JIT (#15163, #15345, #15389, #15529, #15440, #15410, #15405, #15400) and many, many more</li>
+          <li>Fixed some NEON code paths (#15481)</li>
+          <li>Fix performance of texture uploads with Vulkan (#15474)</li>
+          <li>Don&apos;t include the large font atlas when we don&apos;t need it</li>
+          <li>Improved upscaling shaders (#15566)</li>
+          <li>Vulkan texture upscaling performance improvements (#15238), etc.</li>
+          <li>Vulkan correctness fixes (#15217, #15211), use the VMA allocator (#15162), etc.</li>
+          <li>Fixes to depth culling (#15106), many more</li>
+          <li>Background loading of texture replacement (#15025)</li>
+          <li>Threading manager improvements and fixes (#15470), etc.</li>
+          <li>Added search in settings (#14414)</li>
+          <li>Added fast button repeats on custom touch buttons (#15613)</li>
+          <li>Two new bicubic upscaling shader: Catmull-Rom and Mitchell-Netravali (#15569)</li>
+          <li>Allow to change screen rotation per game and to bind a key to change it (#15494, #15510)</li>
+          <li>Re-enabled software rendering option on Android (#12958)</li>
+        </ul>
         <p>Game fixes</p>
-        <p>
-          <ul>
-            <li>Add more workarounds for Mali driver bugs (#15016)</li>
-            <li>Vortex in God of War: Ghost of Sparta can now be passed (#15640)</li>
-            <li>Various proAdhoc fixes (#15213, #15215), and many more</li>
-            <li>Correct flickering text in Sol Trigger and Last Ranker. (#15549)</li>
-            <li>Fix and improve line drawing in Echochrome (#15583), after line refactoring (#15073, #15075)</li>
-            <li>Fix HUD graphics in Split/Second (#15500, #15501)</li>
-            <li>Fix bad screen overlay issues in Clone Wars and Force Unleashed (#15691, #15696, #12949, #9572)</li>
-            <li>Zettai Zetsumei Toshi 3 no longer hangs on character select screen (#15687)</li>
-            <li>Juiced 2: Bloom effect no longer covering the screen (#7295, #15717)</li>
-            <li>Fix keyboard shift issue in a few games (#15698)</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Add more workarounds for Mali driver bugs (#15016)</li>
+          <li>Vortex in God of War: Ghost of Sparta can now be passed (#15640)</li>
+          <li>Various proAdhoc fixes (#15213, #15215), and many more</li>
+          <li>Correct flickering text in Sol Trigger and Last Ranker. (#15549)</li>
+          <li>Fix and improve line drawing in Echochrome (#15583), after line refactoring (#15073, #15075)</li>
+          <li>Fix HUD graphics in Split/Second (#15500, #15501)</li>
+          <li>Fix bad screen overlay issues in Clone Wars and Force Unleashed (#15691, #15696, #12949, #9572)</li>
+          <li>Zettai Zetsumei Toshi 3 no longer hangs on character select screen (#15687)</li>
+          <li>Juiced 2: Bloom effect no longer covering the screen (#7295, #15717)</li>
+          <li>Fix keyboard shift issue in a few games (#15698)</li>
+        </ul>
         <p>UI</p>
-        <p>
-          <ul>
-            <li>Windows/Xbox UWP directory navigation improvements (#15652)</li>
-            <li>Color change and basic theme support (#15396, #15394)</li>
-            <li>Fix input focus bug (#15560)</li>
-            <li>New GE debugger features and other UI fixes (#15393, #15324, #15377, #15424, #15402, #15378, #15338), etc.</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Windows/Xbox UWP directory navigation improvements (#15652)</li>
+          <li>Color change and basic theme support (#15396, #15394)</li>
+          <li>Fix input focus bug (#15560)</li>
+          <li>New GE debugger features and other UI fixes (#15393, #15324, #15377, #15424, #15402, #15378, #15338), etc.</li>
+        </ul>
       </description>
     </release>
     <release version="1.12.3" date="2021-10-18T18:38:20Z">
       <description>
         <p>What&apos;s new in 1.12.3</p>
-        <p>
-          <ul>
-            <li>Fix background music speed. A couple translation fixes.</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Fix background music speed. A couple translation fixes.</li>
+        </ul>
       </description>
     </release>
     <release version="1.12.2" date="2021-10-10T11:28:40Z">
       <description>
         <p>What&apos;s new in 1.12.2</p>
-        <p>
-          <ul>
-            <li>Fix joystick detection bug on Android.</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Fix joystick detection bug on Android.</li>
+        </ul>
       </description>
     </release>
     <release version="1.12.1" date="2021-10-09T08:47:43Z">
       <description>
         <p>What&apos;s new in 1.12.1</p>
-        <p>
-          <ul>
-            <li>Bug fixes (control mapping fix, popup menus in the Windows debugger, a few crashfixes)</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Bug fixes (control mapping fix, popup menus in the Windows debugger, a few crashfixes)</li>
+        </ul>
       </description>
     </release>
     <release version="1.12" date="2021-10-07T14:39:21Z">
@@ -422,6 +406,14 @@
       </description>
     </release>
   </releases>
+  <launchable type="desktop-id">org.ppsspp.PPSSPP.desktop</launchable>
+  <provides>
+    <binary>PPSSPPSDL</binary>
+    <mediatype>application/x-cd-image</mediatype>
+    <mediatype>application/x-iso9660-image</mediatype>
+    <mediatype>application/x-compressed-iso</mediatype>
+    <mediatype>application/zip</mediatype>
+  </provides>
   <categories>
     <category>Game</category>
     <category>Emulator</category>
