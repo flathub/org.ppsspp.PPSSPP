@@ -49,6 +49,8 @@ modules:
       - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
       - install -Dm644 icons/icon-512.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/ppsspp.svg
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
+      # fix icon
+      - ln -s ../share/ppsspp/assets ${FLATPAK_DEST}/bin/assets
     cleanup:
       - /share/ppsspp/assets/lang/README.md
     sources:
@@ -68,15 +70,14 @@ modules:
     buildsystem: simple
     build-commands:
       - |
-        for LANG_FILE in assets/lang/*.ini
-          do LANG_FILE_BASENAME="$(basename "$LANG_FILE")"
-          PPSSPP_LANG="$(grep -Eo '^[a-z]{2}' <<< "$LANG_FILE_BASENAME")"
-          ln -fsr "$FLATPAK_DEST/share/locale/$PPSSPP_LANG/ppsspp/$LANG_FILE_BASENAME" "$FLATPAK_DEST/share/ppsspp/$LANG_FILE"
-          install -Dm644 "$LANG_FILE" "$FLATPAK_DEST/share/locale/$PPSSPP_LANG/ppsspp/$LANG_FILE_BASENAME"
+        for LANG_FILE in assets/lang/*.ini; do
+          LANG_FILE_NAME="$(basename "$LANG_FILE")"
+          LANG_PREFIX="${LANG_FILE_NAME:0:2}"
+          LANG_DEST="$FLATPAK_DEST/share/locale/$LANG_PREFIX/ppsspp/$LANG_FILE_NAME";
+          ln -fsr "$LANG_DEST" "$FLATPAK_DEST/share/ppsspp/$LANG_FILE"
+          install -Dm644 "$LANG_FILE" "$LANG_DEST"
         done
     sources:
-      - type: git
-        url: *ppsspp-url
-        tag: *ppsspp-tag
-        commit: *ppsspp-commit
-        disable-submodules: true
+      - type: shell
+        commands:
+          - cp -a $FLATPAK_DEST/share/ppsspp/assets .
