@@ -47,17 +47,15 @@ modules:
             - -DUSING_GLES2=ON
     post-install:
       - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
-      - install -Dm644 icons/icon-512.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/ppsspp.svg
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
       # fix icon
       - ln -s ../share/ppsspp/assets ${FLATPAK_DEST}/bin/assets
-    cleanup:
-      - /share/ppsspp/assets/lang/README.md
+      - mv "$FLATPAK_DEST/share/mime/packages/"{ppsspp,$FLATPAK_ID}.xml
     sources:
       - type: git
-        url: &ppsspp-url https://github.com/hrydgard/ppsspp.git
-        tag: &ppsspp-tag v1.13.2
-        commit: &ppsspp-commit 9fe6338e3bf397f8a009a51a282c139dfa180eb6
+        url: https://github.com/hrydgard/ppsspp.git
+        tag: v1.14.0
+        commit:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
