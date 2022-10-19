@@ -62,6 +62,11 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
           is-main-source: true
+      
+      - type: shell
+        commands:
+          # fix wayland
+          - git cherry-pick b0ceeede7 83fccd083
 
       - type: file
         path: org.ppsspp.PPSSPP.metainfo.xml
