@@ -53,77 +53,6 @@
           </ul>
         </p>
       </description>
-      <issues>
-        <issue url="https://github.com/hrydgard/ppsspp/issues/15889">#15889</issue>
-      </issues>
-      <artifacts>
-        <artifact type="binary" platform="x86_64-macos-any">
-          <location>https://github.com/hrydgard/ppsspp/releases/download/v1.13.2/PPSSPPSDL-macOS-v1.13.2.zip</location>
-          <checksum type="sha1">86b2943c68014f261ccf1216c7b93cb75f777eb0</checksum>
-          <checksum type="sha256">6d047749b4c9566ee579e11375c6b8483fe2da95657db9a2f5f8eaeb7bef2b32</checksum>
-          <size type="download">29869992</size>
-        </artifact>
-        <artifact type="binary" platform="i386-windows-msvc">
-          <location>https://ppsspp.org/files/1_13_2/ppsspp_win.zip</location>
-          <checksum type="sha1">cfebaf2abba7b82234c793adff470747b5592e83</checksum>
-          <checksum type="sha256">e73c5d639bdf7c39edb1263830f49a84d6061bd64810cd69994911e10faaeb20</checksum>
-          <size type="download">23773114</size>
-        </artifact>
-        <artifact type="binary" platform="x86_64-windows-msvc">
-          <location>https://ppsspp.org/files/1_13_2/ppsspp_win.zip</location>
-          <checksum type="sha1">cfebaf2abba7b82234c793adff470747b5592e83</checksum>
-          <checksum type="sha256">e73c5d639bdf7c39edb1263830f49a84d6061bd64810cd69994911e10faaeb20</checksum>
-          <size type="download">23773114</size>
-        </artifact>
-        <artifact type="binary" platform="aarch64-windows-msvc">
-          <location>https://ppsspp.org/files/1_13_2/PPSSPPWindowsARM64.zip</location>
-          <checksum type="sha1">de4f80b8acfc8d7dede6d9b16607fd07bf51cf45</checksum>
-          <checksum type="sha256">98b964a82464ddacc0abe1830f29ffb2094825df6b20c608426c3455f2b9eff8</checksum>
-          <size type="download">14243817</size>
-        </artifact>
-        <artifact type="binary" platform="i386-linux-android">
-          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
-          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
-          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
-          <size type="download">39721928</size>
-        </artifact>
-        <artifact type="binary" platform="x86_64-linux-android">
-          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
-          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
-          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
-          <size type="download">39721928</size>
-        </artifact>
-        <artifact type="binary" platform="arm-linux-android">
-          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
-          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
-          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
-          <size type="download">39721928</size>
-        </artifact>
-        <artifact type="binary" platform="aarch64-linux-android">
-          <location>https://ppsspp.org/files/1_13_2/ppsspp.apk</location>
-          <checksum type="sha1">cce56192601e6d33133c0f51bbe36d2c6741e7d5</checksum>
-          <checksum type="sha256">3035ce702a8c426ccfde59576800e67f7b5ab135071243c48edb14dec59985c0</checksum>
-          <size type="download">39721928</size>
-        </artifact>
-        <artifact type="source">
-          <location>https://github.com/hrydgard/ppsspp/releases/download/v1.13.2/ppsspp-1.13.2.tar.xz</location>
-          <checksum type="sha1">6a5534048d897c184cb6b67410335810798ee53b</checksum>
-          <checksum type="sha256">df0edaff6ccee55d5bc245ef84190801279214ec2e3d1d3673329e01662764ee</checksum>
-          <size type="download">40363040</size>
-        </artifact>
-        <artifact type="source">
-          <location>https://github.com/hrydgard/ppsspp/archive/refs/tags/v1.13.2.zip</location>
-          <checksum type="sha1">74a54df7f4c1f36df03fcb2a7c498cbea7f14ecd</checksum>
-          <checksum type="sha256">55fbbe9049c20b7a5e4bb2eef3dacbc3eb7686755336978c7ce265994bce38a5</checksum>
-          <size type="download">32872544</size>
-        </artifact>
-        <artifact type="source">
-          <location>https://github.com/hrydgard/ppsspp/archive/refs/tags/v1.13.2.tar.gz</location>
-          <checksum type="sha1">de8246f94182206edbcdd3d29722928e1f8521b6</checksum>
-          <checksum type="sha256">1a7d9962ac47feb2bf2866fee9aea7883352a6334a14436d8e02d37a6fa68943</checksum>
-          <size type="download">31676739</size>
-        </artifact>
-      </artifacts>
     </release>
     <release version="1.13.1b" date="2022-09-10T14:24:51Z"/>
     <release version="1.13.1" date="2022-07-28T13:39:55Z">
@@ -140,13 +69,6 @@
           </ul>
         </p>
       </description>
-      <issues>
-        <issue url="https://github.com/hrydgard/ppsspp/issues/15733">#15733</issue>
-        <issue url="https://github.com/hrydgard/ppsspp/issues/15734">#15734</issue>
-        <issue url="https://github.com/hrydgard/ppsspp/issues/15738">#15738</issue>
-        <issue url="https://github.com/hrydgard/ppsspp/issues/15739">#15739</issue>
-        <issue url="https://github.com/hrydgard/ppsspp/issues/15889">#15740</issue>
-      </issues>
     </release>
     <release version="1.13" date="2022-07-26">
       <description>
