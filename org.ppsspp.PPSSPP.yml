@@ -56,8 +56,8 @@ modules:
     sources:
       - type: git
         url: &ppsspp-url https://github.com/hrydgard/ppsspp.git
-        tag: &ppsspp-tag v1.13.2
-        commit: &ppsspp-commit 9fe6338e3bf397f8a009a51a282c139dfa180eb6
+        tag: v1.14
+        commit: aad5d7542e1f8e805121df4713317eda3ba9eb02
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
