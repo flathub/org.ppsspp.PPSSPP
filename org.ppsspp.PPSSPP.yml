@@ -49,8 +49,6 @@ modules:
       - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
       - install -Dm644 icons/icon-512.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/ppsspp.svg
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
-      # fix icon
-      - ln -s ../share/ppsspp/assets ${FLATPAK_DEST}/bin/assets
     cleanup:
       - /share/ppsspp/assets/lang/README.md
     sources:
