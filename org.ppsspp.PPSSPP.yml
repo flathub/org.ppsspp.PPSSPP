@@ -46,7 +46,7 @@ modules:
             - -DUSING_EGL=ON
             - -DUSING_GLES2=ON
     post-install:
-      - desktop-file-edit --set-name=PPSSPP ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
+      - desktop-file-edit --set-name=PPSSPP --set-key=StartupWMClass --set-value=PPSSPPSDL ${FLATPAK_DEST}/share/applications/PPSSPPSDL.desktop
       - install -Dm644 icons/icon-512.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/ppsspp.svg
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
     cleanup:
