@@ -59,8 +59,9 @@ modules:
         tag: v1.15
         commit: 4a9227504219bbc64e444ba7f0e306746e5a806d
         x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
+          type: anitya
+          project-id: 12295
+          tag-template: 'v$version'
           is-main-source: true
 
       - type: file
