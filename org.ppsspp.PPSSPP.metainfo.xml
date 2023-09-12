@@ -42,6 +42,7 @@
   </screenshots>
   <icon type="remote">https://raw.githubusercontent.com/hrydgard/ppsspp/master/icons/icon-512.svg</icon>
   <releases>
+    <release version="1.16" date="2023-09-12"/>
     <release version="1.15.4" date="2023-05-23"/>
     <release version="1.15.3" date="2023-05-08"/>
     <release version="1.15.2" date="2023-05-05"/>
