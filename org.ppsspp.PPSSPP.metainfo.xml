@@ -2,38 +2,27 @@
 <component type="desktop">
   <id>org.ppsspp.PPSSPP</id>
   <name>PPSSPP</name>
-  <summary>A PlayStation Portable emulator</summary>
-  <summary xml:lang="de">Ein PlayStation Portable‑Emulator</summary>
-  <summary xml:lang="pl">Emulator PlayStation Portable</summary>
+  <summary>A PlayStation Portable emulator</summary>
+  <summary xml:lang="de">Ein PlayStation Portable-Emulator</summary>
+  <summary xml:lang="pl">Emulator PlayStation Portable</summary>
+  <developer_name>Henrik Rydgård</developer_name>
+  <launchable type="desktop-id">ppsspp.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0</project_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  <update_contact>b@bpiotrowski.pl</update_contact>
   <description>
-    <p>
-      PPSSPP is a PSP emulator that can run games in full HD resolution. It can
+    <p>PPSSPP is a PSP emulator that can run games in full HD resolution. It can
       even upscale textures that would otherwise be too blurry as they were made
-      for the small screen of the original PSP.
-    </p>
-    <p xml:lang="de">
-      PPSSPP ist ein PSP‑Emulator, der Spiele in voller HD‑Auflösung
+      for the small screen of the original PSP.</p>
+    <p xml:lang="de">PPSSPP ist ein PSP-Emulator, der Spiele in voller HD-Auflösung
       abspielen kann. Er kann sogar Texturen höher skalieren, welche ansonsten 
       zu verwaschen wären, da sie für den kleinen Bildschirm der ursprünglichen
-      PSP erstellt wurden.
-    </p>
-    <p xml:lang="pl">
-      PPSSPP, to emulator PSP, który potrafi odtwarzać gry w pełnej rozdzielczości
+      PSP erstellt wurden.</p>
+    <p xml:lang="pl">PPSSPP, to emulator PSP, który potrafi odtwarzać gry w pełnej rozdzielczości
       HD. Jest nawet w stanie przeskalować tekstury na większe, które w innym
       przypadku byłyby za bardzo rozmazane, ponieważ zostały stworzone na mały
-      ekran pierwotnej PSP.
-    </p>
+      ekran pierwotnej PSP.</p>
   </description>
-  <developer_name>Henrik Rydgård</developer_name>
-  <url type="homepage">https://www.ppsspp.org/</url>
-  <url type="bugtracker">https://github.com/hrydgard/ppsspp/issues</url>
-  <url type="help">https://www.ppsspp.org/guides.html</url>
-  <url type="faq">https://www.ppsspp.org/faq.html</url>
-  <url type="vcs-browser">https://github.com/hrydgard/ppsspp</url>
-  <url type="contribute">https://www.ppsspp.org/development.html</url>
-  <url type="translate">https://github.com/hrydgard/ppsspp/tree/master/assets/lang</url>
   <screenshots>
     <screenshot type="default">
       <caption>Recent Games</caption>
@@ -52,8 +41,6 @@
       <image type="source">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</image>
     </screenshot>
   </screenshots>
-  <icon type="remote">https://raw.githubusercontent.com/hrydgard/ppsspp/master/icons/icon-512.svg</icon>
-  <launchable type="desktop-id">ppsspp.desktop</launchable>
   <releases>
     <release version="1.16.6" date="2023-10-12"/>
     <release version="1.16.5" date="2023-09-28"/>
@@ -69,7 +56,7 @@
     <release version="1.14.2" date="2022-12-30"/>
     <release version="1.14.1" date="2022-12-20"/>
     <release version="1.14" date="2022-12-15"/>
-    <release version="1.13.2" date="2022-09-10T13:55:49Z">
+    <release version="1.13.2" date="2022-09-10">
       <description>
         <p>What's new in 1.13.2</p>
         <ul>
@@ -79,8 +66,8 @@
         </ul>
       </description>
     </release>
-    <release version="1.13.1b" date="2022-09-10T14:24:51Z"/>
-    <release version="1.13.1" date="2022-07-28T13:39:55Z">
+    <release version="1.13.1b" date="2022-09-10"/>
+    <release version="1.13.1" date="2022-07-28">
       <description>
         <p>What's new in 1.13.1</p>
         <ul>
@@ -145,7 +132,7 @@
         </ul>
       </description>
     </release>
-    <release version="1.12.3" date="2021-10-18T18:38:20Z">
+    <release version="1.12.3" date="2021-10-18">
       <description>
         <p>What's new in 1.12.3</p>
         <ul>
@@ -153,7 +140,7 @@
         </ul>
       </description>
     </release>
-    <release version="1.12.2" date="2021-10-10T11:28:40Z">
+    <release version="1.12.2" date="2021-10-10">
       <description>
         <p>What's new in 1.12.2</p>
         <ul>
@@ -161,7 +148,7 @@
         </ul>
       </description>
     </release>
-    <release version="1.12.1" date="2021-10-09T08:47:43Z">
+    <release version="1.12.1" date="2021-10-09">
       <description>
         <p>What's new in 1.12.1</p>
         <ul>
@@ -169,7 +156,7 @@
         </ul>
       </description>
     </release>
-    <release version="1.12" date="2021-10-07T14:39:21Z">
+    <release version="1.12" date="2021-10-07">
       <description>
         <p>What's new in 1.12</p>
         <p>Platform support:</p>
@@ -362,10 +349,24 @@
       </description>
     </release>
   </releases>
+  <url type="homepage">https://www.ppsspp.org/</url>
+  <url type="bugtracker">https://github.com/hrydgard/ppsspp/issues</url>
+  <url type="faq">https://www.ppsspp.org/faq.html</url>
+  <url type="help">https://www.ppsspp.org/guides.html</url>
+  <url type="translate">https://github.com/hrydgard/ppsspp/tree/master/assets/lang</url>
+  <url type="contact">https://www.ppsspp.org/contact</url>
+  <url type="vcs-browser">https://github.com/hrydgard/ppsspp</url>
+  <url type="contribute">https://www.ppsspp.org/development.html</url>
   <categories>
     <category>Game</category>
     <category>Emulator</category>
   </categories>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>gamepad</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
   <keywords>
     <keyword translate="no">Sony</keyword>
     <keyword translate="no">PlayStation</keyword>
@@ -381,11 +382,4 @@
     <keyword xml:lang="de">Konsole</keyword>
     <keyword xml:lang="pl">konsola</keyword>
   </keywords>
-  <supports>
-    <control>pointing</control>
-    <control>keyboard</control>
-    <control>gamepad</control>
-  </supports>
-  <content_rating type="oars-1.1"/>
-  <update_contact>b@bpiotrowski.pl</update_contact>
 </component>
