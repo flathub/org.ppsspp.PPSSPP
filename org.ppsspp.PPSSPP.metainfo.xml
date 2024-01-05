@@ -6,7 +6,7 @@
   <summary xml:lang="de">Ein PlayStation Portable-Emulator</summary>
   <summary xml:lang="pl">Emulator PlayStation Portable</summary>
   <developer_name>Henrik Rydgård</developer_name>
-  <launchable type="desktop-id">ppsspp.desktop</launchable>
+  <launchable type="desktop-id">PPSSPPSDL.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0-or-later</project_license>
   <update_contact>b@bpiotrowski.pl</update_contact>
