@@ -2,45 +2,45 @@
 <component type="desktop">
   <id>org.ppsspp.PPSSPP</id>
   <name>PPSSPP</name>
-  <summary>A PlayStation Portable emulator</summary>
-  <summary xml:lang="de">Ein PlayStation Portable‑Emulator</summary>
-  <summary xml:lang="pl">Emulator PlayStation Portable</summary>
+  <summary>A PlayStation Portable emulator</summary>
+  <summary xml:lang="de">Ein PlayStation Portable-Emulator</summary>
+  <summary xml:lang="pl">Emulator PlayStation Portable</summary>
+  <developer_name>Henrik Rydgård</developer_name>
+  <launchable type="desktop-id">PPSSPPSDL.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0</project_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  <update_contact>b@bpiotrowski.pl</update_contact>
   <description>
-    <p>
-      PPSSPP is a PSP emulator that can run games in full HD resolution. It can
+    <p>PPSSPP is a PSP emulator that can run games in full HD resolution. It can
       even upscale textures that would otherwise be too blurry as they were made
-      for the small screen of the original PSP.
-    </p>
-    <p xml:lang="de">
-      PPSSPP ist ein PSP‑Emulator, der Spiele in voller HD‑Auflösung
+      for the small screen of the original PSP.</p>
+    <p xml:lang="de">PPSSPP ist ein PSP-Emulator, der Spiele in voller HD-Auflösung
       abspielen kann. Er kann sogar Texturen höher skalieren, welche ansonsten 
       zu verwaschen wären, da sie für den kleinen Bildschirm der ursprünglichen
-      PSP erstellt wurden.
-    </p>
-    <p xml:lang="pl">
-      PPSSPP, to emulator PSP, który potrafi odtwarzać gry w pełnej rozdzielczości
+      PSP erstellt wurden.</p>
+    <p xml:lang="pl">PPSSPP, to emulator PSP, który potrafi odtwarzać gry w pełnej rozdzielczości
       HD. Jest nawet w stanie przeskalować tekstury na większe, które w innym
       przypadku byłyby za bardzo rozmazane, ponieważ zostały stworzone na mały
-      ekran pierwotnej PSP.
-    </p>
+      ekran pierwotnej PSP.</p>
   </description>
-  <developer_name>Henrik Rydgård</developer_name>
-  <url type="homepage">https://www.ppsspp.org/</url>
-  <url type="bugtracker">https://github.com/hrydgard/ppsspp/issues</url>
-  <url type="help">https://www.ppsspp.org/guides.html</url>
-  <url type="faq">https://www.ppsspp.org/faq.html</url>
-  <url type="vcs-browser">https://github.com/hrydgard/ppsspp</url>
-  <url type="contribute">https://www.ppsspp.org/development.html</url>
-  <url type="translate">https://github.com/hrydgard/ppsspp/tree/master/assets/lang</url>
   <screenshots>
-    <screenshot type="default">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/1.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/2.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</screenshot>
+    <screenshot type="default">
+      <caption>Recent Games</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Credits screen</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Settings</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>In-game</caption>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.ppsspp.PPSSPP/master/screenshots/4.png</image>
+    </screenshot>
   </screenshots>
-  <icon type="remote">https://raw.githubusercontent.com/hrydgard/ppsspp/master/icons/icon-512.svg</icon>
   <releases>
     <release version="1.16.6" date="2023-10-12"/>
     <release version="1.16.5" date="2023-09-28"/>
@@ -56,32 +56,28 @@
     <release version="1.14.2" date="2022-12-30"/>
     <release version="1.14.1" date="2022-12-20"/>
     <release version="1.14" date="2022-12-15"/>
-    <release version="1.13.2" date="2022-09-10T13:55:49Z">
+    <release version="1.13.2" date="2022-09-10">
       <description>
         <p>What's new in 1.13.2</p>
-        <p>
-          <ul>
-            <li>Crashfix on Android 12 when playing certain background music ([#15990])</li>
-            <li>Fix Star Ocean battles in D3D backends (#[15889])</li>
-            <li>Minor fixes that might fix some other crashes</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Crashfix on Android 12 when playing certain background music ([#15990])</li>
+          <li>Fix Star Ocean battles in D3D backends (#[15889])</li>
+          <li>Minor fixes that might fix some other crashes</li>
+        </ul>
       </description>
     </release>
-    <release version="1.13.1b" date="2022-09-10T14:24:51Z"/>
-    <release version="1.13.1" date="2022-07-28T13:39:55Z">
+    <release version="1.13.1b" date="2022-09-10"/>
+    <release version="1.13.1" date="2022-07-28">
       <description>
         <p>What's new in 1.13.1</p>
-        <p>
-          <ul>
-            <li>Confirmation dialog added before change of MAC address (#15738)</li>
-            <li>IR interpreter regression fixed (#15739)</li>
-            <li>Fix clearing of replacement texture cache (#15740)</li>
-            <li>Improved Portuguese-pt translation (#15734)</li>
-            <li>Fix graphical regression in Split/Second (#15733)</li>
-            <li>Couple of minor crash fixes</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Confirmation dialog added before change of MAC address (#15738)</li>
+          <li>IR interpreter regression fixed (#15739)</li>
+          <li>Fix clearing of replacement texture cache (#15740)</li>
+          <li>Improved Portuguese-pt translation (#15734)</li>
+          <li>Fix graphical regression in Split/Second (#15733)</li>
+          <li>Couple of minor crash fixes</li>
+        </ul>
       </description>
       <issues>
         <issue url="https://github.com/hrydgard/ppsspp/issues/15733">#15733</issue>
@@ -95,84 +91,72 @@
       <description>
         <p>What's new in 1.13</p>
         <p>General</p>
-        <p>
-          <ul>
-            <li>Fix assorted Android "scoped storage"-related bugs and performance issues (#15237, #15487), etc.</li>
-            <li>Analog mapping for fast-forward (#15645)</li>
-            <li>Major softgpu accuracy fixes and speedups, including a JIT (#15163, #15345, #15389, #15529, #15440, #15410, #15405, #15400) and many, many more</li>
-            <li>Fixed some NEON code paths (#15481)</li>
-            <li>Fix performance of texture uploads with Vulkan (#15474)</li>
-            <li>Don't include the large font atlas when we don't need it</li>
-            <li>Improved upscaling shaders (#15566)</li>
-            <li>Vulkan texture upscaling performance improvements (#15238), etc.</li>
-            <li>Vulkan correctness fixes (#15217, #15211), use the VMA allocator (#15162), etc.</li>
-            <li>Fixes to depth culling (#15106), many more</li>
-            <li>Background loading of texture replacement (#15025)</li>
-            <li>Threading manager improvements and fixes (#15470), etc.</li>
-            <li>Added search in settings (#14414)</li>
-            <li>Added fast button repeats on custom touch buttons (#15613)</li>
-            <li>Two new bicubic upscaling shader: Catmull-Rom and Mitchell-Netravali (#15569)</li>
-            <li>Allow to change screen rotation per game and to bind a key to change it (#15494, #15510)</li>
-            <li>Re-enabled software rendering option on Android (#12958)</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Fix assorted Android "scoped storage"-related bugs and performance issues (#15237, #15487), etc.</li>
+          <li>Analog mapping for fast-forward (#15645)</li>
+          <li>Major softgpu accuracy fixes and speedups, including a JIT (#15163, #15345, #15389, #15529, #15440, #15410, #15405, #15400) and many, many more</li>
+          <li>Fixed some NEON code paths (#15481)</li>
+          <li>Fix performance of texture uploads with Vulkan (#15474)</li>
+          <li>Don't include the large font atlas when we don't need it</li>
+          <li>Improved upscaling shaders (#15566)</li>
+          <li>Vulkan texture upscaling performance improvements (#15238), etc.</li>
+          <li>Vulkan correctness fixes (#15217, #15211), use the VMA allocator (#15162), etc.</li>
+          <li>Fixes to depth culling (#15106), many more</li>
+          <li>Background loading of texture replacement (#15025)</li>
+          <li>Threading manager improvements and fixes (#15470), etc.</li>
+          <li>Added search in settings (#14414)</li>
+          <li>Added fast button repeats on custom touch buttons (#15613)</li>
+          <li>Two new bicubic upscaling shader: Catmull-Rom and Mitchell-Netravali (#15569)</li>
+          <li>Allow to change screen rotation per game and to bind a key to change it (#15494, #15510)</li>
+          <li>Re-enabled software rendering option on Android (#12958)</li>
+        </ul>
         <p>Game fixes</p>
-        <p>
-          <ul>
-            <li>Add more workarounds for Mali driver bugs (#15016)</li>
-            <li>Vortex in God of War: Ghost of Sparta can now be passed (#15640)</li>
-            <li>Various proAdhoc fixes (#15213, #15215), and many more</li>
-            <li>Correct flickering text in Sol Trigger and Last Ranker. (#15549)</li>
-            <li>Fix and improve line drawing in Echochrome (#15583), after line refactoring (#15073, #15075)</li>
-            <li>Fix HUD graphics in Split/Second (#15500, #15501)</li>
-            <li>Fix bad screen overlay issues in Clone Wars and Force Unleashed (#15691, #15696, #12949, #9572)</li>
-            <li>Zettai Zetsumei Toshi 3 no longer hangs on character select screen (#15687)</li>
-            <li>Juiced 2: Bloom effect no longer covering the screen (#7295, #15717)</li>
-            <li>Fix keyboard shift issue in a few games (#15698)</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Add more workarounds for Mali driver bugs (#15016)</li>
+          <li>Vortex in God of War: Ghost of Sparta can now be passed (#15640)</li>
+          <li>Various proAdhoc fixes (#15213, #15215), and many more</li>
+          <li>Correct flickering text in Sol Trigger and Last Ranker. (#15549)</li>
+          <li>Fix and improve line drawing in Echochrome (#15583), after line refactoring (#15073, #15075)</li>
+          <li>Fix HUD graphics in Split/Second (#15500, #15501)</li>
+          <li>Fix bad screen overlay issues in Clone Wars and Force Unleashed (#15691, #15696, #12949, #9572)</li>
+          <li>Zettai Zetsumei Toshi 3 no longer hangs on character select screen (#15687)</li>
+          <li>Juiced 2: Bloom effect no longer covering the screen (#7295, #15717)</li>
+          <li>Fix keyboard shift issue in a few games (#15698)</li>
+        </ul>
         <p>UI</p>
-        <p>
-          <ul>
-            <li>Windows/Xbox UWP directory navigation improvements (#15652)</li>
-            <li>Color change and basic theme support (#15396, #15394)</li>
-            <li>Fix input focus bug (#15560)</li>
-            <li>New GE debugger features and other UI fixes (#15393, #15324, #15377, #15424, #15402, #15378, #15338), etc.</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Windows/Xbox UWP directory navigation improvements (#15652)</li>
+          <li>Color change and basic theme support (#15396, #15394)</li>
+          <li>Fix input focus bug (#15560)</li>
+          <li>New GE debugger features and other UI fixes (#15393, #15324, #15377, #15424, #15402, #15378, #15338), etc.</li>
+        </ul>
       </description>
     </release>
-    <release version="1.12.3" date="2021-10-18T18:38:20Z">
+    <release version="1.12.3" date="2021-10-18">
       <description>
         <p>What's new in 1.12.3</p>
-        <p>
-          <ul>
-            <li>Fix background music speed. A couple translation fixes.</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Fix background music speed. A couple translation fixes.</li>
+        </ul>
       </description>
     </release>
-    <release version="1.12.2" date="2021-10-10T11:28:40Z">
+    <release version="1.12.2" date="2021-10-10">
       <description>
         <p>What's new in 1.12.2</p>
-        <p>
-          <ul>
-            <li>Fix joystick detection bug on Android.</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Fix joystick detection bug on Android.</li>
+        </ul>
       </description>
     </release>
-    <release version="1.12.1" date="2021-10-09T08:47:43Z">
+    <release version="1.12.1" date="2021-10-09">
       <description>
         <p>What's new in 1.12.1</p>
-        <p>
-          <ul>
-            <li>Bug fixes (control mapping fix, popup menus in the Windows debugger, a few crashfixes)</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Bug fixes (control mapping fix, popup menus in the Windows debugger, a few crashfixes)</li>
+        </ul>
       </description>
     </release>
-    <release version="1.12" date="2021-10-07T14:39:21Z">
+    <release version="1.12" date="2021-10-07">
       <description>
         <p>What's new in 1.12</p>
         <p>Platform support:</p>
@@ -365,10 +349,24 @@
       </description>
     </release>
   </releases>
+  <url type="homepage">https://www.ppsspp.org/</url>
+  <url type="bugtracker">https://github.com/hrydgard/ppsspp/issues</url>
+  <url type="faq">https://www.ppsspp.org/faq.html</url>
+  <url type="help">https://www.ppsspp.org/guides.html</url>
+  <url type="translate">https://github.com/hrydgard/ppsspp/tree/master/assets/lang</url>
+  <url type="contact">https://www.ppsspp.org/contact</url>
+  <url type="vcs-browser">https://github.com/hrydgard/ppsspp</url>
+  <url type="contribute">https://www.ppsspp.org/development.html</url>
   <categories>
     <category>Game</category>
     <category>Emulator</category>
   </categories>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>gamepad</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
   <keywords>
     <keyword translate="no">Sony</keyword>
     <keyword translate="no">PlayStation</keyword>
@@ -384,11 +382,4 @@
     <keyword xml:lang="de">Konsole</keyword>
     <keyword xml:lang="pl">konsola</keyword>
   </keywords>
-  <supports>
-    <control>pointing</control>
-    <control>keyboard</control>
-    <control>gamepad</control>
-  </supports>
-  <content_rating type="oars-1.1"/>
-  <update_contact>b@bpiotrowski.pl</update_contact>
 </component>
