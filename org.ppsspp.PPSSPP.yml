@@ -17,8 +17,6 @@ finish-args:
   - --env=SDL_VIDEO_X11_WMCLASS=org.ppsspp.PPSSPP
   - --env=SDL_VIDEO_WAYLAND_WMCLASS=org.ppsspp.PPSSPP
   # required for Gamescope on Steam Deck
-  - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/gamescope/bin
-  - --env=LD_LIBRARY_PATH=/usr/lib/extensions/vulkan/gamescope/lib
   - --filesystem=xdg-run/gamescope-0:ro
 modules:
   - shared-modules/glu/glu-9.json
