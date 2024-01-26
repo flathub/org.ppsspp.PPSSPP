@@ -16,6 +16,8 @@ finish-args:
   - --talk-name=org.freedesktop.ScreenSaver
   - --env=SDL_VIDEO_X11_WMCLASS=org.ppsspp.PPSSPP
   - --env=SDL_VIDEO_WAYLAND_WMCLASS=org.ppsspp.PPSSPP
+  # required for Gamescope on Steam Deck
+  - --filesystem=xdg-run/gamescope-0:ro
 modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
