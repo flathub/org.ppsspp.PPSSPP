@@ -14,6 +14,7 @@ finish-args:
   - --share=ipc
   - --share=network
   - --talk-name=org.freedesktop.ScreenSaver
+  - --env=SDL_VIDEODRIVER=auto
   - --env=SDL_VIDEO_X11_WMCLASS=org.ppsspp.PPSSPP
   - --env=SDL_VIDEO_WAYLAND_WMCLASS=org.ppsspp.PPSSPP
   # required for Gamescope on Steam Deck
