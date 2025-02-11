@@ -370,6 +370,7 @@
     <control>pointing</control>
     <control>keyboard</control>
     <control>gamepad</control>
+    <control>touch</control>
   </supports>
   <content_rating type="oars-1.1"/>
   <keywords>
