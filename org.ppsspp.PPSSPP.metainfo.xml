@@ -43,10 +43,199 @@
   </screenshots>
   <releases>
     <release version="1.18.1" date="2024-11-04">
-      <description></description>
+      <description>
+        <p>What's new in 1.18.1</p>
+        <ul>
+          <li>Crashfix in PBP reader (homebrew/demos) (#19580)</li>
+          <li>Fix minor theme issue in the Homebrew Store (#19582)</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/19580">#19580</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/19582">#19582</issue>
+      </issues>
     </release>
-    <release version="1.17.1" date="2024-02-04"/>
-    <release version="1.17" date="2024-01-27"/>
+    <release version="1.17.1" date="2024-02-04">
+      <description>
+        <p>What's new in 1.17.1</p>
+        <ul>
+          <li>Fixed green rendering errors on some PowerVR GPUs (#18781)</li>
+          <li>Release all held keys on pause to avoid "stuck keys" after unpausing or in run-behind-pause (#18786)</li>
+          <li>UI fixes (#18785)</li>
+          <li>Update libchdr with zstd support, warn the user about bad CHDs (#18824, #18803)</li>
+          <li>Add workaround for AdHoc mode in Resistance (#18821)</li>
+          <li>Fix graphics in Tokimeki Memorial 4 (#18822)</li>
+          <li>Fix crash in UFC 2010 on Mali GPUs (#18813)</li>
+          <li>Temporarily disable MSAA on Adreno GPUs due to crashing (#18819)</li>
+          <li>Fixed some crashes and optimized the game metadata cache (#18794, #18775)</li>
+          <li>Additional crashfixes and similar (#18777, #18779, #18823)</li>
+          <li>Fixed playback of frame dumps with Vulkan (#18793)</li>
+          <li>Volume slider added for RetroAchievements sounds (#18772)</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18781">#18781</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18786">#18786</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18785">#18785</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18824">#18824</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18803">#18803</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18821">#18821</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18822">#18822</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18813">#18813</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18819">#18819</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18794">#18794</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18775">#18775</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18777">#18777</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18779">#18779</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18823">#18823</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18793">#18793</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18772">#18772</issue>
+      </issues>
+    </relase>
+    <release version="1.17" date="2024-01-27">
+      <description>
+        <p>What's new in 1.17</p>
+        <p>Rendering performance and fixes</p>
+        <ul>
+          <li>Cull small draws that are quick to check that they are offscreen (#18446)</li>
+          <li>Assorted optimizations (#18586, #18573, #18476, #18413, #18416, #18219), deleted the Vertex Cache option (no longer needed)</li>
+          <li>Fix HUD in Tiger Woods 06 (#18554)</li>
+          <li>AdrenoTools support added - you can now load custom Vulkan drivers on Adreno (#18532, #18548, #18699)
+            <ul>
+              <li>Disabled in the Google Play builds for now</li>
+            </ul>
+          </li>
+          <li>Fix rendering with bad Z parameters, fixes homebrew Zig example (#18535)</li>
+          <li>Fix Z problem in Hayate no Gotoku!! Nightmare Paradise #18478</li>
+          <li>Fix frozen pitch meters in MLB games (#18484)</li>
+          <li>Enable MSAA on modern mobile devices (Vulkan-only) (#18472)</li>
+          <li>Performance improvement in Tactics Ogre by avoiding a readback (#18599)</li>
+          <li>Fix video flicker in Naruto: Ultimate Ninja Heroes 2 (#18454)</li>
+          <li>Fix for very old rendering issue in Tokimeki Memorial 4 (#18650), although didn't actually fix the game overall unfortunately</li>
+        </ul>
+        <p>UI</p>
+        <ul>
+          <li>Track total time played per game (#18442)</li>
+          <li>When opening the pause menu, there's now an option to keep the game running behind the menu
+            <ul>
+              <li>This is enforced in multiplayer to avoid inadvertent desyncs (#18517, #18515)</li>
+            </ul>
+          </li>
+        </ul>
+        <p>ISO loading improvements</p>
+        <ul>
+          <li>The CHD file format is now fully supported, including with Remote ISO and Retroachievements. Use `chdman createdvd`, DO NOT use `createcd`</li>
+          <li>Improvements to <a href="https://www.ppsspp.org/docs/reference/disc-streaming/">remote ISO</a>: optional tab on home screen, can now share whole folders (#18627, #18639, #18640, #18631, #18632, #18633)</li>
+        </ul>
+        <p>Controller and touchscreen fixes</p>
+        <ul>
+          <li>More control bindings, organize into categories (#18635, #18589)</li>
+          <li>Fix inverse deadzone (low end) for joystick input</li>
+          <li>Fix analog deadzones for XInput controllers (#18407)</li>
+          <li>Improved tilt control further (#18533)</li>
+          <li>Mouse input supported on Android (#18551, #18473)</li>
+          <li>Customizable threshold for analog-trigger to button-press mapping, customizable delay for mouse-scroll key-up (#18621, #18585)</li>
+          <li>Make it work better to bind an analog stick to four buttons, useful for camera control in some games</li>
+          <li>Can now unpause with the key you bound to pause (#18591)</li>
+        </ul>
+        <p>Other fixes and updates</p>
+        <ul>
+          <li>More work on the IR JITs (#18234, #18235, #18228, #18227, #18226, many more)</li>
+          <li>Moving the memstick directory on Android is now faster and safer #18744</li>
+          <li>Workaround problems in Add Doko Demo Issho, Driver 76, Harukanaru Toki no Naka, Ace Combat by slowing down the emulated UMD drive to match reality better (#18436, #18445)</li>
+          <li>VR: Quest 3 rendering issues fixed (#18677)</li>
+          <li>Various bugfixes in texture replacement (#18638, #18610, #18519, #18466, #18747)</li>
+          <li>RetroAchievements: Rich presence, renamed Challenge Mode back to the recommended Hardcore Mode, various error handling improvements, configure per game (#18468, #18651, #18488, #18428, #18425)</li>
+          <li>HLE: Slice large-and-slow memcpy/memset operations, can help with some stalls. (#18560)</li>
+          <li>Other various minor fixes and optimizations (#18558, #18555, #18538, #18529, #18450, #18314, #18233, #18678, #18749, #18736, #18704)</li>
+          <li>SoftGPU fixes (#18362)</li>
+          <li>Fixed international fonts on Steam Deck (#18732, #18734)</li>
+          <li>GoExplore (GPS app) now starts up and allows navigation (#18665, #18666, #18668, #18669)</li>
+          <li>SDL: Improve input latency in Vulkan mode by running rendering on a separate thread (#18268)</li>
+          <li>Assorted multiplayer fixes (#18435)</li>
+          <li>Support for emulating the infrared port of the original PSP through sceSircs (#18684)</li>
+        </ul>
+      <description>
+      <issues>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18446">#18446</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18586">#18586</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18573">#18573</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18476">#18476</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18413">#18413</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18416">#18416</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18219">#18219</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18554">#18554</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18532">#18532</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18548">#18548</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18699">#18699</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18535">#18535</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18478">#18478</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18484">#18484</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18472">#18472</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18599">#18599</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18454">#18454</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18650">#18650</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18442">#18442</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18517">#18517</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18515">#18515</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18627">#18627</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18639">#18639</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18640">#18640</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18631">#18631</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18632">#18632</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18633">#18633</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18635">#18635</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18589">#18589</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18407">#18407</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18533">#18533</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18551">#18551</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18473">#18473</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18621">#18621</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18585">#18585</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18591">#18591</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18234">#18234</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18235">#18235</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18228">#18228</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18227">#18227</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18226">#18226</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18744">#18744</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18436">#18436</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18445">#18445</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18677">#18677</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18638">#18638</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18610">#18610</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18519">#18519</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18466">#18466</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18747">#18747</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18468">#18468</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18651">#18651</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18488">#18488</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18428">#18428</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18425">#18425</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18560">#18560</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18558">#18558</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18555">#18555</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18538">#18538</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18529">#18529</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18450">#18450</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18314">#18314</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18233">#18233</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18678">#18678</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18749">#18749</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18736">#18736</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18704">#18704</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18362">#18362</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18732">#18732</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18734">#18734</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18665">#18665</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18666">#18666</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18668">#18668</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18669">#18669</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18268">#18268</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18435">#18435</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/18684">#18684</issue>
+      </issues>
+    </release>
     <release version="1.16.6" date="2023-10-12"/>
     <release version="1.16.5" date="2023-09-28"/>
     <release version="1.16.3" date="2023-09-22"/>
@@ -251,7 +440,7 @@
       <description>
         <p>What's new in 1.11.2:</p>
         <ul>
-          <li>An additional few crash fixes(#14129, #14134, #14132)</li>
+          <li>An additional few crash fixes (#14129, #14134, #14132)</li>
         </ul>
       </description>
     </release>
