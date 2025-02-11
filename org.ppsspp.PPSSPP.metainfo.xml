@@ -100,11 +100,7 @@
           <li>Cull small draws that are quick to check that they are offscreen (#18446)</li>
           <li>Assorted optimizations (#18586, #18573, #18476, #18413, #18416, #18219), deleted the Vertex Cache option (no longer needed)</li>
           <li>Fix HUD in Tiger Woods 06 (#18554)</li>
-          <li>AdrenoTools support added - you can now load custom Vulkan drivers on Adreno (#18532, #18548, #18699)
-            <ul>
-              <li>Disabled in the Google Play builds for now</li>
-            </ul>
-          </li>
+          <li>AdrenoTools support added - you can now load custom Vulkan drivers on Adreno (#18532, #18548, #18699) Disabled in the Google Play builds for now</li>
           <li>Fix rendering with bad Z parameters, fixes homebrew Zig example (#18535)</li>
           <li>Fix Z problem in Hayate no Gotoku!! Nightmare Paradise #18478</li>
           <li>Fix frozen pitch meters in MLB games (#18484)</li>
@@ -116,16 +112,12 @@
         <p>UI</p>
         <ul>
           <li>Track total time played per game (#18442)</li>
-          <li>When opening the pause menu, there's now an option to keep the game running behind the menu
-            <ul>
-              <li>This is enforced in multiplayer to avoid inadvertent desyncs (#18517, #18515)</li>
-            </ul>
-          </li>
+          <li>When opening the pause menu, there's now an option to keep the game running behind the menu. This is enforced in multiplayer to avoid inadvertent desyncs (#18517, #18515)</li>
         </ul>
         <p>ISO loading improvements</p>
         <ul>
           <li>The CHD file format is now fully supported, including with Remote ISO and Retroachievements. Use `chdman createdvd`, DO NOT use `createcd`</li>
-          <li>Improvements to <a href="https://www.ppsspp.org/docs/reference/disc-streaming/">remote ISO</a>: optional tab on home screen, can now share whole folders (#18627, #18639, #18640, #18631, #18632, #18633)</li>
+          <li>Improvements to remote ISO: optional tab on home screen, can now share whole folders (#18627, #18639, #18640, #18631, #18632, #18633)</li>
         </ul>
         <p>Controller and touchscreen fixes</p>
         <ul>
