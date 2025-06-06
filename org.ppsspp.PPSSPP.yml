@@ -49,8 +49,8 @@ modules:
     sources:
       - type: git
         url: &ppsspp-url https://github.com/hrydgard/ppsspp.git
-        tag: v1.18.1
-        commit: 0f50225f8e741c2f8a3a35cfd3b7d9dd0a16b34f
+        tag: v1.19
+        commit: aec61100f673dcaa077d93039689b426d9e75637
         x-checker-data:
           type: json
           url: https://api.github.com/repos/hrydgard/ppsspp/releases/latest
