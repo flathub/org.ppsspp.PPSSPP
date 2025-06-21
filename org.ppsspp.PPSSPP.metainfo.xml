@@ -42,6 +42,226 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.19.2" date="2024-06-15">
+      <description>
+        <p>What's new in 1.19.2</p>
+        <ul>
+          <li>In-game save/load not properly detected for saving reminder (#20500)</li>
+          <li>Install savedata from ZIP was partially broken (#20498)</li>
+          <li>Fixed module loader bug affecting a few games (#20513)</li>
+          <li>Fixed some hangs in the Windows debugger (#20510)</li>
+          <li>Fix performance problem in texture replacement (#20520)</li>
+          <li>Assorted fixes (#20518, #20514, #20502, #20515)</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20500">#20500</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20498">#20498</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20513">#20513</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20510">#20510</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20520">#20520</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20518">#20518</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20514">#20514</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20502">#20502</issue>
+        <issue url="https://github.com/hrydgard/ppsspp/issues/20515">#20515</issue>
+      </issues>
+    </release>
+    <release version="1.19.1" date="2024-05-09">
+    <description>
+      <p>What's new in 1.19.1</p>
+      <ul>
+        <li>Fix selecting background image on Android (#20477)</li>
+        <li>Fix RetroAchievements regression for multi-executable games (#20469)</li>
+        <li>Possible fix for Mac audio device selection issue (#20482)</li>
+        <li>Add workaround for Dragon's Lair not working with LLE scePsmf (#20468)</li>
+        <li>Prevent trying to load obviously-corrupt CSO/CHD files (#20466)</li>
+        <li>Fix regression for homebrew apps that request extra memory (#20457)</li>
+        <li>Fix grid drawing in the various Robot Taisen games (#20456)</li>
+        <li>Fix crash in UI when viewing a directory with multiple NPDRM ISOs (#20453)</li>
+      </ul>
+    </description>
+    <issues>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20477">#20477</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20469">#20469</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20482">#20482</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20468">#20468</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20466">#20466</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20457">#20457</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20456">#20456</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20453">#20453</issue>
+    </issues>
+  </release>
+  <release version="1.19" date="2024-06-05">
+    <description>
+      <p>What's new in 1.19</p>
+      <p>Audio</p>
+      <ul>
+        <li>Brand new sceAtrac implementation, fixing Flatout and multiple other long-standing issues! (#20098, #20136, #20138, #20162)</li>
+        <li>More correctly implemented sceAtrac-through-sceSas functionality, fixing voice in Sol Trigger and multiple minis (#20156)</li>
+        <li>Better support for using sceAudiocodec directly, fixing music in some homebrew apps (#20199, #20246, #20253, #20209)</li>
+        <li>Volume control improvement (#19969, #19971)</li>
+      </ul>
+      <p>Rendering fixes and performance</p>
+      <ul>
+        <li>Important: This will be the last major version with D3D9 support. D3D11 will of course continue to be supported, along with Vulkan and OpenGL.</li>
+        <li>Fix smoke effects in Jak'n'Daxter by re-using the fix from Ratchet & Clank (#20032)</li>
+        <li>Software depth buffer rendering added to fix lens flares in multiple games efficiently (Midnight Club LA, Wipeout, Syphon Filter etc) (#19748, #19764, #20231, #19955, etc)</li>
+        <li>Multiple rendering-related crash fixes (#20270, #20346, #20344)</li>
+        <li>Texture replacement load speed corrected and can now be controlled (#20286), regression fix for zipped packs (#19860)</li>
+        <li>Additional assorted compatibility and other fixes (#20376, #20070, #19685)</li>
+        <li>Persona 1/2 readback fixes (#20067, #20068)</li>
+        <li>Other correctness fixes (#20233, #20255, #19686)</li>
+      </ul>
+      <p>General emulation</p>
+      <ul>
+        <li>Allow disabling HLE on a per-module basis (if games ship the module so we can load it). Enabled for sceCcc (#20218), and more importantly scePsmf (#20208), fixing multiple issues.</li>
+        <li>Additional module loading improvements (#20114)</li>
+        <li>More precise sleep function on Windows (#20054)</li>
+        <li>More replacement texture improvements, allow replacing game icons (#19975, #19978)</li>
+        <li>Disable certain features like fast-forward when networking is on, to avoid de-syncs (#20311)</li>
+        <li>Fixes mono Atrac3 as video soundtrack (#19800)</li>
+        <li>Improvements to RISC-V support (#20352)</li>
+      </ul>
+      <p>Control and input</p>
+      <ul>
+        <li>Touch gliding support added (#19983)</li>
+        <li>Allow simultaneous DInput and XInput input (#20347)</li>
+      </ul>
+      <p>New "Dear ImGui"-based PSP debugger: ImDebugger</p>
+      <ul>
+        <li>Allows very rapid development of debugging features as-needed, and also implements a pretty good Ge debugger for stepping through draws.</li>
+        <li>Unlike the old Win32 debugger (but similar to the unmaintained web debugger), works on all platforms (though cumbersome on touchscreens)</li>
+        <li>Major commits (though there are many more): (#20242, #20240, #20294)</li>
+      </ul>
+      <p>Multiplayer</p>
+      <ul>
+        <li>Added Infrastructure multiplayer support, with automatic DNS configuration (#19865, #19869, #20221, #20220, #19875)</li>
+        <li>Implement more of sceNet (prerequisite for the former feature).</li>
+        <li>Socket re-mapping implemented (#19827)</li>
+        <li>Assorted bugfixes, thanks ANR2ME (#20247, #20245, #19843, #19849, #19836)</li>
+      </ul>
+      <p>UI</p>
+      <ul>
+        <li>Loading spinner now actually spins properly, the app no longer appears to hang (#20341)</li>
+        <li>Minor features: Asks for confirmation on exit in most scenarios (#19996, #20023), DPI scaling (#20013), can pause without menu (#19883)</li>
+        <li>As usual a lot of tweaks, perf fixes, and fixes for hangs and crashes (#20343, #20332, #20305, #20303, #20299, #20163, #20152, #20143, #20079, #20137, #20374)</li>
+        <li>Two new color themes (#20334, #20335), related themability fixes (#19984, #19995, #20308)</li>
+        <li>Improvements and bug fixes in the savedata manager (#19771, #20170)</li>
+        <li>Add "Move to trash" deletion funcionality to multiple platforms (#20230, #20261)</li>
+        <li>Add ability to take "raw" screenshots of gameplay (#20029)</li>
+        <li>More files can be loaded directly from ZIP (#20243)</li>
+        <li>Developer Settings are now tabbed for easier access (#20228)</li>
+        <li>Switch to the full libpng API so we can disable gamma correction, like the real PSP (#20033)</li>
+        <li>Support displaying the battery percentage on more platforms (#19973, #19967)</li>
+        <li>Allow picking a background image on iOS (#20370)</li>
+      </ul>
+      <p>Platform compatibility</p>
+      <ul>
+        <li>Exclude older Macs from using Vulkan (too many black screens, hangs) (#20236)</li>
+        <li>Use portable-file-dialogs to provide file-open dialogs on Linux (#20175)</li>
+        <li>"Cache full ISO in RAM" is now correctly hidden where it doesn't work (#20165)</li>
+        <li>Now rendering at proper resolution on newer Macs (#20011)</li>
+        <li>Mouse input improved on Android, including separate button mapping (#19915)</li>
+        <li>Use the correct font again on Mac/iOS (#19874)</li>
+        <li>Multiple file access optimizations made to make the most out of the flawed foundation called Android Scoped Storage (#19668)</li>
+      </ul>
+    </description>
+    <issues>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20098">#20098</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20136">#20136</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20138">#20138</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20162">#20162</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20156">#20156</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20199">#20199</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20246">#20246</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20253">#20253</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20209">#20209</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19969">#19969</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19971">#19971</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20032">#20032</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19748">#19748</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19764">#19764</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20231">#20231</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19955">#19955</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20270">#20270</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20346">#20346</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20344">#20344</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20286">#20286</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19860">#19860</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20376">#20376</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20070">#20070</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19685">#19685</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20067">#20067</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20068">#20068</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20233">#20233</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20255">#20255</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19686">#19686</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20218">#20218</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20208">#20208</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20114">#20114</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20054">#20054</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19975">#19975</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19978">#19978</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20311">#20311</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19800">#19800</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20352">#20352</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19983">#19983</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20347">#20347</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20242">#20242</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20240">#20240</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20294">#20294</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19865">#19865</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19869">#19869</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20221">#20221</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20220">#20220</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19875">#19875</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19827">#19827</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20247">#20247</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20245">#20245</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19843">#19843</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19849">#19849</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19836">#19836</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20341">#20341</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19996">#19996</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20023">#20023</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20013">#20013</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19883">#19883</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20343">#20343</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20332">#20332</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20305">#20305</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20303">#20303</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20299">#20299</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20163">#20163</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20152">#20152</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20143">#20143</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20079">#20079</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20137">#20137</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20374">#20374</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20334">#20334</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20335">#20335</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19984">#19984</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19995">#19995</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20308">#20308</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19771">#19771</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20170">#20170</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20230">#20230</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20261">#20261</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20029">#20029</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20243">#20243</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20228">#20228</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20033">#20033</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19973">#19973</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19967">#19967</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20370">#20370</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20236">#20236</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20175">#20175</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20165">#20165</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/20011">#20011</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19915">#19915</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19874">#19874</issue>
+      <issue url="https://github.com/hrydgard/ppsspp/issues/19668">#19668</issue>
+    </issues>
+  </release>
     <release version="1.18.1" date="2024-11-04">
       <description>
         <p>What's new in 1.18.1</p>
