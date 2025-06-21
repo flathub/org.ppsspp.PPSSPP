@@ -104,7 +104,7 @@
       <p>Rendering fixes and performance</p>
       <ul>
         <li>Important: This will be the last major version with D3D9 support. D3D11 will of course continue to be supported, along with Vulkan and OpenGL.</li>
-        <li>Fix smoke effects in Jak'n'Daxter by re-using the fix from Ratchet & Clank (#20032)</li>
+        <li>Fix smoke effects in Jak'n'Daxter by re-using the fix from Ratchet &amp; Clank (#20032)</li>
         <li>Software depth buffer rendering added to fix lens flares in multiple games efficiently (Midnight Club LA, Wipeout, Syphon Filter etc) (#19748, #19764, #20231, #19955, etc)</li>
         <li>Multiple rendering-related crash fixes (#20270, #20346, #20344)</li>
         <li>Texture replacement load speed corrected and can now be controlled (#20286), regression fix for zipped packs (#19860)</li>
