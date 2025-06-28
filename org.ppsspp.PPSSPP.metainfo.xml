@@ -42,7 +42,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.19.2" date="2024-06-15">
+    <release version="1.19.2" date="2025-06-15">
       <description>
         <p>What's new in 1.19.2</p>
         <ul>
@@ -66,7 +66,7 @@
         <issue url="https://github.com/hrydgard/ppsspp/issues/20515">#20515</issue>
       </issues>
     </release>
-    <release version="1.19.1" date="2024-06-09">
+    <release version="1.19.1" date="2025-06-09">
     <description>
       <p>What's new in 1.19.1</p>
       <ul>
@@ -91,7 +91,7 @@
       <issue url="https://github.com/hrydgard/ppsspp/issues/20453">#20453</issue>
     </issues>
   </release>
-  <release version="1.19" date="2024-06-05">
+  <release version="1.19" date="2025-06-05">
     <description>
       <p>What's new in 1.19</p>
       <p>Audio</p>
