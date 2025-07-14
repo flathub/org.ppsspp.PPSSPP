@@ -42,6 +42,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.19.3" date="2025-07-14">
+      <description></description>
+    </release>
     <release version="1.19.2" date="2025-06-15">
       <description>
         <p>What's new in 1.19.2</p>
