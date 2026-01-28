@@ -22,6 +22,22 @@ modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
 
+  - name: sdl2
+    buildsystem: simple
+    config-opts:
+      - ac_cv_path_FREETYPE_CONFIG=pkg-config freetype2
+      - --disable-static
+    sources:
+      - type: git
+        url: https://github.com/libsdl-org/SDL.git
+        tag: release-2.32.10
+        commit: 5d249570393f7a37e037abf22cd6012a4cc56a71
+    build-commands:
+      - ./autogen.sh
+      - ./configure --prefix=${FLATPAK_DEST}/
+      - make
+      - make install
+
   - name: ppsspp
     buildsystem: cmake
     config-opts:
