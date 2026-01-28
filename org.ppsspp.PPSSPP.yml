@@ -22,6 +22,9 @@ modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
 
+  # The runtime provides the SDL2-compat module that is a bit brokenish.
+  # We are intentionally compiling the SDL2 module to fix some issues.
+  # See: Pull Request #96
   - name: sdl2
     buildsystem: simple
     config-opts:
